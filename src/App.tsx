@@ -7,6 +7,11 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
 import { PricingTestPage } from "@/components/PricingTestPage";
+import { lazy, Suspense } from "react";
+
+const Blog = lazy(() => import("./pages/Blog"));
+const MukteshwarTempleGuide = lazy(() => import("./pages/blog/MukteshwarTempleGuide"));
+const MukteshwarWeatherGuide = lazy(() => import("./pages/blog/MukteshwarWeatherGuide"));
 
 const queryClient = new QueryClient();
 
