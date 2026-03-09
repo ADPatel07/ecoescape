@@ -24,6 +24,9 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/blog" element={<Suspense fallback={<div className="min-h-screen" />}><Blog /></Suspense>} />
+            <Route path="/blog/mukteshwar-mahadev-temple-guide" element={<Suspense fallback={<div className="min-h-screen" />}><MukteshwarTempleGuide /></Suspense>} />
+            <Route path="/blog/mukteshwar-weather-guide" element={<Suspense fallback={<div className="min-h-screen" />}><MukteshwarWeatherGuide /></Suspense>} />
             <Route path="/test-pricing" element={<PricingTestPage />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
