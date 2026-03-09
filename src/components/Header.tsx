@@ -114,20 +114,35 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-6">
-            {navLinks.map((link) => (
-              <button
-                key={link.name}
-                onClick={() => scrollToSection(link.href)}
-                className={cn(
-                  "font-medium transition-colors text-sm",
-                  isScrolled
-                    ? "text-foreground/80 hover:text-primary"
-                    : "text-[hsl(40_20%_90%)] hover:text-[hsl(40_30%_98%)]"
-                )}
-              >
-                {link.name}
-              </button>
-            ))}
+            {navLinks.map((link) =>
+              'isRoute' in link && link.isRoute ? (
+                <Link
+                  key={link.name}
+                  to={link.href}
+                  className={cn(
+                    "font-medium transition-colors text-sm",
+                    isScrolled
+                      ? "text-foreground/80 hover:text-primary"
+                      : "text-[hsl(40_20%_90%)] hover:text-[hsl(40_30%_98%)]"
+                  )}
+                >
+                  {link.name}
+                </Link>
+              ) : (
+                <button
+                  key={link.name}
+                  onClick={() => scrollToSection(link.href)}
+                  className={cn(
+                    "font-medium transition-colors text-sm",
+                    isScrolled
+                      ? "text-foreground/80 hover:text-primary"
+                      : "text-[hsl(40_20%_90%)] hover:text-[hsl(40_30%_98%)]"
+                  )}
+                >
+                  {link.name}
+                </button>
+              )
+            )}
           </div>
 
           {/* CTA Buttons */}
