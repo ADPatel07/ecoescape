@@ -15,6 +15,7 @@ const navLinks = [
   { name: "Gallery", href: "#gallery" },
   { name: "Things to Do", href: "#things-to-do" },
   { name: "Reviews", href: "#reviews" },
+  { name: "Blog", href: "/blog", isRoute: true },
 ];
 
 export function Header() {
@@ -113,20 +114,35 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-6">
-            {navLinks.map((link) => (
-              <button
-                key={link.name}
-                onClick={() => scrollToSection(link.href)}
-                className={cn(
-                  "font-medium transition-colors text-sm",
-                  isScrolled
-                    ? "text-foreground/80 hover:text-primary"
-                    : "text-[hsl(40_20%_90%)] hover:text-[hsl(40_30%_98%)]"
-                )}
-              >
-                {link.name}
-              </button>
-            ))}
+            {navLinks.map((link) =>
+              'isRoute' in link && link.isRoute ? (
+                <Link
+                  key={link.name}
+                  to={link.href}
+                  className={cn(
+                    "font-medium transition-colors text-sm",
+                    isScrolled
+                      ? "text-foreground/80 hover:text-primary"
+                      : "text-[hsl(40_20%_90%)] hover:text-[hsl(40_30%_98%)]"
+                  )}
+                >
+                  {link.name}
+                </Link>
+              ) : (
+                <button
+                  key={link.name}
+                  onClick={() => scrollToSection(link.href)}
+                  className={cn(
+                    "font-medium transition-colors text-sm",
+                    isScrolled
+                      ? "text-foreground/80 hover:text-primary"
+                      : "text-[hsl(40_20%_90%)] hover:text-[hsl(40_30%_98%)]"
+                  )}
+                >
+                  {link.name}
+                </button>
+              )
+            )}
           </div>
 
           {/* CTA Buttons */}
@@ -183,15 +199,26 @@ export function Header() {
               id="mobile-menu"
             >
               <div className="p-4 space-y-2">
-                {navLinks.map((link) => (
-                  <button
-                    key={link.name}
-                    onClick={() => scrollToSection(link.href)}
-                    className="block w-full text-left text-foreground hover:text-primary font-medium py-3 px-4 rounded-lg hover:bg-secondary transition-colors"
-                  >
-                    {link.name}
-                  </button>
-                ))}
+                {navLinks.map((link) =>
+                  'isRoute' in link && link.isRoute ? (
+                    <Link
+                      key={link.name}
+                      to={link.href}
+                      onClick={() => setIsOpen(false)}
+                      className="block w-full text-left text-foreground hover:text-primary font-medium py-3 px-4 rounded-lg hover:bg-secondary transition-colors"
+                    >
+                      {link.name}
+                    </Link>
+                  ) : (
+                    <button
+                      key={link.name}
+                      onClick={() => scrollToSection(link.href)}
+                      className="block w-full text-left text-foreground hover:text-primary font-medium py-3 px-4 rounded-lg hover:bg-secondary transition-colors"
+                    >
+                      {link.name}
+                    </button>
+                  )
+                )}
                 <div className="pt-4 border-t border-border space-y-2">
                   <Button
                     variant="outline"

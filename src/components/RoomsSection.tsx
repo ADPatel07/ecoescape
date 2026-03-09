@@ -124,33 +124,10 @@ export function RoomsSection() {
     if (roomName) {
       trackBookingSubmit({ roomType: roomName, guests: 'unknown' });
     }
-    if (mode === "teaser") {
-      // On home page, navigate to rooms page
-      navigate("/rooms", { state: { selectedRoom: roomType } });
-    } else {
-      // On rooms page, scroll to booking form
-      const booking = document.getElementById("booking");
-      if (booking) {
-        booking.scrollIntoView({ behavior: "smooth" });
-      }
+    const booking = document.getElementById("booking");
+    if (booking) {
+      booking.scrollIntoView({ behavior: "smooth" });
     }
-  };
-
-  const handleBookFromModal = (roomType: RoomType) => {
-    scrollToBooking(roomType);
-    if (onBookRoom) {
-      onBookRoom(roomType);
-    }
-  };
-
-  const openModal = (room: Room) => {
-    setSelectedRoom(room);
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-    setSelectedRoom(null);
   };
 
   return (

@@ -3,14 +3,12 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import {
-  getCurrentPrice,
   formatPrice,
   formatPriceExact,
   isPeakSeason,
   getPriceForDate,
   getBookingPrice,
   getRoomPricing,
-  mapRoomTypeToPricingType,
   type RoomType
 } from "@/services/pricing";
 

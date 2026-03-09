@@ -12,7 +12,7 @@ import { siteConfig } from "@/config/site";
 import { sanitizeName, sanitizePhone, sanitizeEmail } from "@/lib/sanitizer";
 import { createWhatsAppMessage, openWhatsAppWithMessage } from "@/services/whatsapp";
 import { trackBookingSubmit, trackWhatsAppClick, trackPhoneClick, trackEmailClick } from "@/lib/analytics";
-import { getCurrentPrice, formatPrice, getBookingPrice, mapRoomTypeToPricingType, isPeakSeason } from "@/services/pricing";
+import { getCurrentPrice, formatPrice, getBookingPrice, mapRoomTypeToPricingType } from "@/services/pricing";
 
 const bookingSchema = z.object({
   name: z.string().trim().min(2, "Name must be at least 2 characters").max(100),
