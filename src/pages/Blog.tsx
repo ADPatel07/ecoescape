@@ -14,6 +14,7 @@ const blogPosts = [
     date: "March 5, 2026",
     readTime: "8 min read",
     image: "/placeholder.svg",
+    imageAlt: "Mukteshwar Mahadev Temple with Himalayan mountain backdrop and traditional architecture",
     category: "Travel Guide",
   },
   {
@@ -24,6 +25,7 @@ const blogPosts = [
     date: "March 2, 2026",
     readTime: "6 min read",
     image: "/placeholder.svg",
+    imageAlt: "Seasonal weather views of Mukteshwar showing Himalayan peaks through different seasons",
     category: "Planning",
   },
 ];
@@ -59,11 +61,12 @@ export default function Blog() {
                 <div className="sm:w-72 h-48 sm:h-auto bg-muted flex-shrink-0 overflow-hidden">
                   <img
                     src={post.image}
-                    alt={post.title}
+                    alt={post.imageAlt || post.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                     width={288}
                     height={192}
+                    sizes="(max-width: 640px) 100vw, 288px"
                   />
                 </div>
                 <div className="p-6 flex flex-col justify-between flex-1">

@@ -168,6 +168,7 @@ export function RoomsSection() {
                   loading="lazy"
                   width={600}
                   height={256}
+                  sizes="(max-width: 768px) 100vw, 33vw"
                 />
                 <div className="absolute top-4 right-4 bg-background/90 backdrop-blur-sm rounded-full px-4 py-2">
                   <span className="font-serif font-semibold text-primary">{room.price}</span>

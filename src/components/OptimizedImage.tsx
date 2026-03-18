@@ -1,23 +1,38 @@
 import { useState } from "react";
 
-interface OptimizedImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
+interface OptimizedImageProps extends Omit<React.ImgHTMLAttributes<HTMLImageElement>, 'loading' | 'fetchPriority'> {
   src: string;
   alt: string;
+  width?: number;
+  height?: number;
+  priority?: boolean;
+  className?: string;
 }
 
-export function OptimizedImage({ src, alt, className = "", ...props }: OptimizedImageProps) {
+export function OptimizedImage({
+  src,
+  alt,
+  width,
+  height,
+  priority = false,
+  className = "",
+  ...props
+}: OptimizedImageProps) {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(false);
 
   return (
-    <div className={`relative overflow-hidden ${className}`}>
+    <div className={`relative overflow-hidden ${className}`} style={width && height ? { aspectRatio: `${width}/${height}` } : undefined}>
       {isLoading && (
         <div className="absolute inset-0 bg-gray-200 dark:bg-gray-800 animate-pulse" />
       )}
       <img
         src={src}
         alt={alt}
-        loading="lazy"
+        loading={priority ? "eager" : "lazy"}
+        fetchPriority={priority ? "high" : "auto"}
+        width={width}
+        height={height}
         onLoad={() => setIsLoading(false)}
         onError={() => {
           setIsLoading(false);
