@@ -7,6 +7,9 @@ export const defaultMeta = {
   keywords:
     "Ecoescape Mukteshwar, Mukteshwar homestay, Mukteshwar bed and breakfast, sunrise view property Mukteshwar, garden homestay Uttarakhand, safe homestay Mukteshwar, terrace dining Mukteshwar, best place to stay Mukteshwar",
   ogImage: "https://ecoescapemukteshwar.com/LOGO.png",
+  ogImageWidth: "1200",
+  ogImageHeight: "630",
+  ogImageAlt: "Ecoescape Mukteshwar - A boutique homestay with sunrise views and lush gardens in Uttarakhand",
   twitterCard: "summary_large_image",
   canonical: "https://ecoescapemukteshwar.com",
 };

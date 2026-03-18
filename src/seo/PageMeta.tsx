@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { siteUrl } from "./defaultMeta";
+import { siteUrl, defaultMeta } from "./defaultMeta";
 
 /**
  * PageMeta Component
@@ -21,6 +21,9 @@ interface PageMetaProps {
   description: string;
   canonical?: string;
   ogImage?: string;
+  ogImageWidth?: string;
+  ogImageHeight?: string;
+  ogImageAlt?: string;
   ogType?: string;
   keywords?: string;
   noindex?: boolean;
@@ -33,6 +36,9 @@ export function PageMeta({
   description,
   canonical,
   ogImage,
+  ogImageWidth,
+  ogImageHeight,
+  ogImageAlt,
   ogType = "website",
   keywords,
   noindex = false,
@@ -42,7 +48,11 @@ export function PageMeta({
   // Use the canonical URL or fallback to site URL
   const fullCanonical = canonical ? (canonical.startsWith("http") ? canonical : `${siteUrl}${canonical}`) : siteUrl;
 
-  // Default OG title to page title if not provided
+  // Defaults from defaultMeta
+  const finalOgImage = ogImage || defaultMeta.ogImage;
+  const finalOgImageWidth = ogImageWidth || defaultMeta.ogImageWidth;
+  const finalOgImageHeight = ogImageHeight || defaultMeta.ogImageHeight;
+  const finalOgImageAlt = ogImageAlt || defaultMeta.ogImageAlt;
   const finalOgTitle = ogTitle || title;
   const finalOgDescription = ogDescription || description;
 
@@ -63,14 +73,17 @@ export function PageMeta({
       <meta property="og:description" content={finalOgDescription} />
       <meta property="og:url" content={fullCanonical} />
       <meta property="og:locale" content="en_IN" />
-      {ogImage && <meta property="og:image" content={ogImage} />}
+      {finalOgImage && <meta property="og:image" content={finalOgImage} />}
+      {finalOgImageWidth && <meta property="og:image:width" content={finalOgImageWidth} />}
+      {finalOgImageHeight && <meta property="og:image:height" content={finalOgImageHeight} />}
+      {finalOgImageAlt && <meta property="og:image:alt" content={finalOgImageAlt} />}
       <meta property="og:site_name" content="Ecoescape Mukteshwar" />
 
       {/* Twitter Card Tags */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={finalOgTitle} />
       <meta name="twitter:description" content={finalOgDescription} />
-      {ogImage && <meta name="twitter:image" content={ogImage} />}
+      {finalOgImage && <meta name="twitter:image" content={finalOgImage} />}
     </Helmet>
   );
 }
