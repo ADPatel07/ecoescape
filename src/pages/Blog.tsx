@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { FloatingCTA } from "@/components/FloatingCTA";
+import { PageMeta } from "@/seo/PageMeta";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
 
 const blogPosts = [
@@ -30,6 +31,12 @@ const blogPosts = [
 export default function Blog() {
   return (
     <div className="min-h-screen bg-background">
+      <PageMeta
+        title="Mukteshwar Travel Blog | Guides, Tips & Things to Do - Ecoescape"
+        description="Discover Mukteshwar through local guides - weather tips, temple guides, trekking routes, and Kumaon travel advice. Plan your Uttarakhand trip with expert insights."
+        canonical="https://ecoescapemukteshwar.com/blog"
+        keywords="Mukteshwar travel blog, Mukteshwar guide, Mukteshwar weather, Mukteshwar temple, Uttarakhand travel, Kumaon tourism"
+      />
       <Header />
       <main className="pt-40 pb-20">
         <div className="container max-w-4xl">

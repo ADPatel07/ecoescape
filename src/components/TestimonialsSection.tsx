@@ -7,6 +7,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { SchemaInjector } from "@/components/SchemaInjector";
+import { generateReviewSchema, formatDateForSchema } from "@/lib/schema";
 
 const testimonials = [
   {
@@ -55,9 +57,25 @@ const testimonials = [
   },
 ];
 
+// Generate Review Schemas for all testimonials
+const reviewSchemas = testimonials.map((testimonial) =>
+  generateReviewSchema({
+    author: {
+      name: testimonial.name,
+    },
+    reviewRating: {
+      ratingValue: testimonial.rating,
+      bestRating: 5,
+    },
+    reviewBody: testimonial.text,
+    datePublished: formatDateForSchema(testimonial.date),
+  })
+);
+
 export function TestimonialsSection() {
   return (
     <section id="reviews" className="py-24 bg-secondary">
+      <SchemaInjector schemas={reviewSchemas} />
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -2,13 +2,48 @@ import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { FloatingCTA } from "@/components/FloatingCTA";
+import { PageMeta } from "@/seo/PageMeta";
+import { SchemaInjector } from "@/components/SchemaInjector";
+import { generateArticleSchema, generateBreadcrumbSchema, formatDateForSchema } from "@/lib/schema";
 import { ArrowLeft, Calendar, Clock, MapPin, Phone, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
 
 export default function MukteshwarTempleGuide() {
+  // Article Schema
+  const articleSchema = generateArticleSchema({
+    headline: "Mukteshwar Mahadev Temple — Complete Visitor Guide & Where to Stay in Mukteshwar",
+    image: "https://ecoescapemukteshwar.com/og-image.jpg",
+    datePublished: formatDateForSchema("March 5, 2026"),
+    author: {
+      "@type": "Organization",
+      name: "Ecoescape Mukteshwar",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Ecoescape Mukteshwar",
+      url: "https://ecoescapemukteshwar.com",
+    },
+    description: "Discover the ancient Mukteshwar Mahadev Temple, its history, timings, how to reach, and the best places to stay nearby for a memorable Himalayan pilgrimage.",
+    url: "https://ecoescapemukteshwar.com/blog/mukteshwar-mahadev-temple-guide",
+  });
+
+  // Breadcrumb Schema
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", item: "https://ecoescapemukteshwar.com" },
+    { name: "Blog", item: "https://ecoescapemukteshwar.com/blog" },
+    { name: "Mukteshwar Mahadev Temple Guide" },
+  ]);
+
   return (
     <div className="min-h-screen bg-background">
+      <PageMeta
+        title="Mukteshwar Mahadev Temple Guide | Complete Visitor Info & Where to Stay"
+        description="Plan your visit to Mukteshwar Mahadev Temple (7 km from Ecoescape). Discover temple timings, history, how to reach, and best places to stay in Mukteshwar. Includes travel tips for Uttarakhand pilgrims."
+        canonical="https://ecoescapemukteshwar.com/blog/mukteshwar-mahadev-temple-guide"
+        keywords="Mukteshwar Mahadev Temple, Mukteshwar Dham, Mukteshwar temple guide, Uttarakhand temples, places to visit Mukteshwar, stay near Mukteshwar temple"
+      />
+      <SchemaInjector schemas={[articleSchema, breadcrumbSchema]} />
       <Header />
       <main className="pt-28 pb-20">
         <article className="container max-w-3xl">

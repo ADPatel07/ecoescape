@@ -2,6 +2,9 @@ import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { FloatingCTA } from "@/components/FloatingCTA";
+import { PageMeta } from "@/seo/PageMeta";
+import { SchemaInjector } from "@/components/SchemaInjector";
+import { generateArticleSchema, generateBreadcrumbSchema, formatDateForSchema } from "@/lib/schema";
 import { ArrowLeft, Calendar, Clock, MessageCircle, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
@@ -22,8 +25,40 @@ const weatherData = [
 ];
 
 export default function MukteshwarWeatherGuide() {
+  // Article Schema
+  const articleSchema = generateArticleSchema({
+    headline: "Weather in Mukteshwar — Month-by-Month Guide for Planning Your Trip",
+    image: "https://ecoescapemukteshwar.com/og-image.jpg",
+    datePublished: formatDateForSchema("March 2, 2026"),
+    author: {
+      "@type": "Organization",
+      name: "Ecoescape Mukteshwar",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Ecoescape Mukteshwar",
+      url: "https://ecoescapemukteshwar.com",
+    },
+    description: "Everything you need to know about Mukteshwar's weather throughout the year — best months to visit, what to pack, and seasonal highlights for every traveler.",
+    url: "https://ecoescapemukteshwar.com/blog/mukteshwar-weather-guide",
+  });
+
+  // Breadcrumb Schema
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", item: "https://ecoescapemukteshwar.com" },
+    { name: "Blog", item: "https://ecoescapemukteshwar.com/blog" },
+    { name: "Mukteshwar Weather Guide" },
+  ]);
+
   return (
     <div className="min-h-screen bg-background">
+      <PageMeta
+        title="Mukteshwar Weather Guide | Best Time to Visit, Month-by-Month Climate"
+        description="Planning a trip to Mukteshwar? Know when to go — monthly weather breakdown, best seasons, packing tips, and monsoon alerts. Perfect for Uttarakhand travel planning."
+        canonical="https://ecoescapemukteshwar.com/blog/mukteshwar-weather-guide"
+        keywords="Mukteshwar weather, best time to visit Mukteshwar, Mukteshwar monsoon, Uttarakhand weather, Mukteshwar temperature, when to visit Mukteshwar"
+      />
+      <SchemaInjector schemas={[articleSchema, breadcrumbSchema]} />
       <Header />
       <main className="pt-28 pb-20">
         <article className="container max-w-3xl">
