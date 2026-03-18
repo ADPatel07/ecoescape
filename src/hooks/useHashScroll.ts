@@ -9,7 +9,7 @@ export function useHashScroll() {
   const { hash, pathname } = useLocation();
 
   useEffect(() => {
-    if (hash) {
+    if (hash && typeof document !== 'undefined') {
       // Small delay to ensure the DOM and any lazy-loaded components are rendered
       const timer = setTimeout(() => {
         const id = hash.replace("#", "");

@@ -21,29 +21,42 @@ const navLinks = [
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
   const location = useLocation();
   const isHomePage = location.pathname === "/";
 
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   const handleScroll = useThrottle(() => {
-    setIsScrolled(window.scrollY > 50);
+    if (typeof window !== 'undefined') {
+      setIsScrolled(window.scrollY > 50);
+    }
   }, 100);
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    if (typeof window !== 'undefined') {
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+    }
   }, [handleScroll]);
 
   const scrollToSection = (href: string) => {
     setIsOpen(false);
-    
+
     if (!isHomePage) {
       // If not on home page, we need to navigate to home page first
-      window.location.href = `/${href}`;
+      if (typeof window !== 'undefined') {
+        window.location.href = `/${href}`;
+      }
       return;
     }
 
-    const element = document.querySelector<HTMLElement>(href);
-    element?.scrollIntoView({ behavior: "smooth" });
+    if (typeof document !== 'undefined') {
+      const element = document.querySelector<HTMLElement>(href);
+      element?.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   const handleWhatsApp = useCallback(() => {
