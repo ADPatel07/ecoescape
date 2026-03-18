@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone, MessageCircle, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
@@ -21,6 +21,8 @@ const navLinks = [
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
 
   const handleScroll = useThrottle(() => {
     setIsScrolled(window.scrollY > 50);
@@ -33,6 +35,13 @@ export function Header() {
 
   const scrollToSection = (href: string) => {
     setIsOpen(false);
+    
+    if (!isHomePage) {
+      // If not on home page, we need to navigate to home page first
+      window.location.href = `/${href}`;
+      return;
+    }
+
     const element = document.querySelector<HTMLElement>(href);
     element?.scrollIntoView({ behavior: "smooth" });
   };
@@ -50,20 +59,23 @@ export function Header() {
     window.location.href = `tel:${siteConfig.phone}`;
   }, []);
 
+  // Determine if we should show the scrolled (dark) style
+  const showScrolledStyle = isScrolled || !isHomePage;
+
   return (
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-40 transition-all duration-300",
-        isScrolled
+        showScrolledStyle
           ? "bg-background/95 backdrop-blur-md border-b border-border/50 shadow-soft"
           : "bg-transparent"
       )}
     >
-      {/* Top bar with contact info - only when scrolled */}
+      {/* Top bar with contact info - only when scrolled or not on home page */}
       <div
         className={cn(
           "hidden md:block bg-primary text-primary-foreground py-2 transition-all",
-          isScrolled ? "opacity-100" : "opacity-0 h-0 py-0 overflow-hidden"
+          showScrolledStyle ? "opacity-100" : "opacity-0 h-0 py-0 overflow-hidden"
         )}
       >
         <div className="container flex items-center justify-between text-sm">
@@ -108,7 +120,7 @@ export function Header() {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
             <div className="flex flex-col">
-              <img src={isScrolled ? "/LOGO2.webp" : "/LOGO.webp"} alt="Ecoescape Mukteshwar Logo" width={175} height={136} className="w-[100px] h-auto" />
+              <img src={showScrolledStyle ? "/LOGO2.webp" : "/LOGO.webp"} alt="Ecoescape Mukteshwar Logo" width={175} height={136} className="w-[100px] h-auto" />
             </div>
           </Link>
 
@@ -121,7 +133,7 @@ export function Header() {
                   to={link.href}
                   className={cn(
                     "font-medium transition-colors text-sm",
-                    isScrolled
+                    showScrolledStyle
                       ? "text-foreground/80 hover:text-primary"
                       : "text-[hsl(40_20%_90%)] hover:text-[hsl(40_30%_98%)]"
                   )}
@@ -134,7 +146,7 @@ export function Header() {
                   onClick={() => scrollToSection(link.href)}
                   className={cn(
                     "font-medium transition-colors text-sm",
-                    isScrolled
+                    showScrolledStyle
                       ? "text-foreground/80 hover:text-primary"
                       : "text-[hsl(40_20%_90%)] hover:text-[hsl(40_30%_98%)]"
                   )}
@@ -153,7 +165,7 @@ export function Header() {
               onClick={handleCall}
               className={cn(
                 "transition-colors",
-                isScrolled
+                showScrolledStyle
                   ? "text-foreground hover:text-primary"
                   : "text-[hsl(40_30%_98%)] hover:bg-[hsl(40_30%_98%/0.1)]"
               )}
@@ -171,11 +183,12 @@ export function Header() {
           <button
             className={cn(
               "lg:hidden p-2 rounded-lg transition-colors",
-              isScrolled
+              showScrolledStyle
                 ? "text-foreground hover:bg-secondary"
                 : "text-[hsl(40_30%_98%)] hover:bg-[hsl(40_30%_98%/0.1)]"
             )}
             onClick={() => setIsOpen(!isOpen)}
+
             aria-label="Toggle menu"
             aria-expanded={isOpen}
             aria-controls="mobile-menu"

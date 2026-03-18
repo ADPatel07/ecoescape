@@ -31,7 +31,7 @@ export default function Blog() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <main className="pt-28 pb-20">
+      <main className="pt-40 pb-20">
         <div className="container max-w-4xl">
           <div className="text-center mb-14">
             <h1 className="text-4xl md:text-5xl font-serif font-semibold text-foreground mb-4">

@@ -3,6 +3,7 @@ import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/HeroSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
 import { FloatingCTA } from "@/components/FloatingCTA";
+import { useHashScroll } from "@/hooks/useHashScroll";
 
 const RoomsSection = lazy(() => import("@/components/RoomsSection").then(m => ({ default: m.RoomsSection })));
 const TestimonialsSection = lazy(() => import("@/components/TestimonialsSection").then(m => ({ default: m.TestimonialsSection })));
@@ -18,6 +19,7 @@ const Footer = lazy(() => import("@/components/Footer").then(m => ({ default: m.
 const SectionFallback = () => <div className="min-h-[200px]" />;
 
 const Index = () => {
+  useHashScroll();
   return (
     <div className="min-h-screen">
       <Header />
