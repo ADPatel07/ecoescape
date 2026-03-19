@@ -1,0 +1,22 @@
+name: AI Code Review with Z.ai
+
+on:
+  pull_request:
+    types: [opened, synchronize, ready_for_review, reopened]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  review:
+    name: Review
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code Review
+        uses: tarmojussila/zai-code-review@v0.3.0
+        with:
+          ZAI_API_KEY: ${{ secrets.ZAI_API_KEY }}
+          ZAI_MODEL: ${{ secrets.ZAI_MODEL }}
+          ZAI_SYSTEM_PROMPT: ${{ secrets.ZAI_SYSTEM_PROMPT }}
+          ZAI_REVIEWER_NAME: ${{ secrets.ZAI_REVIEWER_NAME }}
