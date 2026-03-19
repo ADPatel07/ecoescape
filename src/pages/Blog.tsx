@@ -20,8 +20,56 @@ import workcationImg from "@/assets/blog/workcation/featured.png";
 import romanticImg from "@/assets/blog/romantic/featured.png";
 import soloImg from "@/assets/blog/solo/featured.png";
 import familyImg from "@/assets/blog/family/featured.png";
+import monsoonImg from "@/assets/blog/monsoon/featured.png";
+import photographyImg from "@/assets/blog/photography/featured.png";
+import festivalsImg from "@/assets/blog/festivals/featured.png";
+import packingImg from "@/assets/blog/packing-list/featured.png";
 
 const blogPosts = [
+  {
+    slug: "monsoon-in-mukteshwar-guide",
+    title: "Mukteshwar in Monsoon: A Comprehensive Guide to the Misty Mountains",
+    excerpt:
+      "Experience the magic of Mukteshwar in monsoon. Our 2026 guide covers weather, misty Himalayan views, lush green trails, and why the rainy season is the best time for a quiet retreat.",
+    date: "March 19, 2026",
+    readTime: "9 min read",
+    image: monsoonImg,
+    imageAlt: "Misty mountain landscape in Mukteshwar during the monsoon season",
+    category: "Seasonal Guide",
+  },
+  {
+    slug: "best-photography-spots-in-mukteshwar",
+    title: "10 Best Photography Spots in Mukteshwar: Capturing the Himalayan Soul",
+    excerpt:
+      "Looking for the best photography spots in Mukteshwar? From the dramatic cliffs of Chauli Ki Jali to the sunrise views at Ecoescape, here is your 2026 photography guide.",
+    date: "March 19, 2026",
+    readTime: "8 min read",
+    image: photographyImg,
+    imageAlt: "A professional camera capturing the Himalayan peaks at sunset in Mukteshwar",
+    category: "Photography Guide",
+  },
+  {
+    slug: "local-festivals-and-culture-guide",
+    title: "Local Festivals & Culture in Mukteshwar: A Kumaoni Heritage Guide",
+    excerpt:
+      "Discover the vibrant culture of Mukteshwar. From the traditional Choliya dance to festivals like Phool Dei and Harela, learn how to experience authentic Kumaoni heritage at Ecoescape.",
+    date: "March 19, 2026",
+    readTime: "10 min read",
+    image: festivalsImg,
+    imageAlt: "Traditional Choliya dancers performing in a village square in Mukteshwar",
+    category: "Cultural Guide",
+  },
+  {
+    slug: "mukteshwar-ultimate-packing-list",
+    title: "Ultimate Packing List for Mukteshwar: Essentials for Every Season (2026)",
+    excerpt:
+      "What to pack for Mukteshwar? Our comprehensive 2026 packing guide covers clothing for summer, monsoon, and winter, plus trekking gear and essential travel items.",
+    date: "March 19, 2026",
+    readTime: "7 min read",
+    image: packingImg,
+    imageAlt: "A neatly organized travel packing layout for a mountain trip to Mukteshwar",
+    category: "Travel Checklist",
+  },
   {
     slug: "workcation-guide",
     title: "Workcation in Mukteshwar: A Digital Nomad's Guide to Working from the Hills",
