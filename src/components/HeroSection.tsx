@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle, Calendar, Star } from "lucide-react";
-import heroImage from "@/assets/hero-sunrise.webp";
+
 
 export function HeroSection() {
   const scrollToBooking = () => {
@@ -18,23 +18,29 @@ export function HeroSection() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-start justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src={heroImage}
-          alt="Sunrise view from Ecoescape Mukteshwar terrace overlooking Himalayan mountains"
+          src="/images/hero-sunrise.webp"
+          alt="Sunrise view over the Himalayan mountains from the terrace of Ecoescape Mukteshwar boutique homestay"
           className="w-full h-full object-cover"
           loading="eager"
           fetchPriority="high"
           width={1920}
           height={1080}
+          sizes="100vw"
+          srcSet={`
+            /images/hero-sunrise.webp 1920w,
+            /images/hero-sunrise.webp 1280w,
+            /images/hero-sunrise.webp 640w
+          `}
         />
         <div className="absolute inset-0 bg-hero-overlay" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container pt-32 pb-20">
+      <div className="relative z-10 container pt-[180px] pb-20">
         <div className="max-w-3xl">
           {/* Trust Badge */}
           <div className="inline-flex items-center gap-2 bg-background/90 backdrop-blur-sm rounded-full px-4 py-2 mb-6 animate-fade-in">

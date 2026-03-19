@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { X } from "lucide-react";
+import { OptimizedImage } from "@/components/OptimizedImage";
 
 // Suite
 import suite1 from "@/assets/suite/IMG_4065.webp";
@@ -44,41 +45,77 @@ const gallerySections = [
     description:
       "Our premium suite features panoramic Himalayan views, hand-crafted wooden interiors, and all modern comforts for an indulgent mountain retreat.",
     images: [suite2, suite1, suite3, suite4],
+    altTexts: [
+      "Premium suite bedroom with Himalayan mountain views from window at Ecoescape Mukteshwar",
+      "Luxury suite interior with wooden furniture and mountain vistas",
+      "Suite room with comfortable seating area overlooking Kumaon hills",
+      "Premium suite bathroom with modern amenities and mountain views"
+    ],
   },
   {
     title: "Two Bedroom Apartment",
     description:
       "Perfect for families or groups, our two-bedroom apartment offers generous living space, a fully equipped kitchen, and stunning mountain vistas from every room.",
     images: [apt1, apt2, apt3, apt4],
+    altTexts: [
+      "Spacious two bedroom apartment living room with mountain views at Ecoescape Mukteshwar",
+      "Family apartment bedroom with Himalayan sunrise views",
+      "Two bedroom apartment kitchen fully equipped for home cooking",
+      "Apartment dining area with valley views perfect for family meals"
+    ],
   },
   {
     title: "Terrace",
     description:
       "Step onto our sun-drenched terrace and lose yourself in an unbroken 180° panorama of the Himalayas — the perfect spot for morning chai or stargazing at night.",
     images: [terrace1, terrace2, terrace3, terrace4],
+    altTexts: [
+      "Sun-drenched terrace with panoramic Himalayan views at Ecoescape Mukteshwar",
+      "Terrace dining setup with mountain sunrise views",
+      "Evening terrace stargazing spot with Himalayan peaks",
+      "Open terrace space for yoga and relaxation with valley views"
+    ],
   },
   {
     title: "Views",
     description:
       "Waking up to the Himalayan skyline is an experience that never grows old. Every angle of Ecoescape frames a postcard-worthy scene of peaks, valleys and clouds.",
     images: [view1, view2, view3, view4],
+    altTexts: [
+      "Stunning Himalayan sunrise view from Ecoescape Mukteshwar terrace",
+      "Panoramic view of Kumaon Himalayan peaks from Mukteshwar",
+      "Misty mountain valley views from Ecoescape property",
+      "Golden hour mountain views from Ecoescape Mukteshwar homestay"
+    ],
   },
   {
     title: "Activities",
     description:
       "From guided nature walks and birdwatching to bonfire evenings and local village tours — there is always something to explore around Mukteshwar.",
     images: [act1, act4, act3, act2],
+    altTexts: [
+      "Nature walk trail through deodar forests near Mukteshwar",
+      "Bonfire evening setup at Ecoescape Mukteshwar terrace",
+      "Bird watching experience in Kumaon Himalayan forests",
+      "Village tour activity exploring local Kumaoni culture"
+    ],
   },
   {
     title: "Food & Dining",
     description:
       "Savour freshly prepared Kumaoni dishes and continental favourites using locally sourced ingredients. Every meal is cooked with love and served with a view.",
     images: [food1, food2, food3, food4],
+    altTexts: [
+      "Fresh Kumaoni thali meal served at Ecoescape Mukteshwar restaurant",
+      "Continental breakfast with mountain view dining at Ecoescape",
+      "Home-cooked Kumaoni cuisine prepared with local ingredients",
+      "Terrace dining experience with Himalayan views at Ecoescape Mukteshwar"
+    ],
   },
 ];
 
 export function GallerySection() {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
 
   return (
     <section id="gallery" className="py-20 bg-background">
@@ -142,13 +179,15 @@ export function GallerySection() {
                     whileHover={{ scale: 1.03 }}
                     transition={{ duration: 0.3 }}
                     className="relative overflow-hidden rounded-xl cursor-pointer group aspect-square"
-                    onClick={() => setSelectedImage(src)}
+                    onClick={() => setSelectedImage({
+                      src,
+                      alt: section.altTexts?.[imgIndex] || `${section.title} photo ${imgIndex + 1} at Ecoescape Mukteshwar`
+                    })}
                   >
-                    <img
+                    <OptimizedImage
                       src={src}
-                      alt={`${section.title} photo ${imgIndex + 1}`}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                      loading="lazy"
+                      alt={section.altTexts?.[imgIndex] || `${section.title} photo ${imgIndex + 1} at Ecoescape Mukteshwar`}
+                      className="transition-transform duration-500 group-hover:scale-110"
                       width={400}
                       height={400}
                     />
@@ -197,8 +236,8 @@ export function GallerySection() {
             <X className="h-8 w-8" />
           </button>
           <img
-            src={selectedImage}
-            alt="Gallery image enlarged"
+            src={selectedImage.src}
+            alt={selectedImage.alt}
             className="max-w-full max-h-[90vh] object-contain rounded-lg"
             onClick={(e) => e.stopPropagation()}
           />

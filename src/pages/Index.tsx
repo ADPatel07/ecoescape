@@ -3,6 +3,9 @@ import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/HeroSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
 import { FloatingCTA } from "@/components/FloatingCTA";
+import { PageMeta } from "@/seo/PageMeta";
+import { useHashScroll } from "@/hooks/useHashScroll";
+import { reviewSchemas } from "@/config/testimonials";
 
 const RoomsSection = lazy(() => import("@/components/RoomsSection").then(m => ({ default: m.RoomsSection })));
 const TestimonialsSection = lazy(() => import("@/components/TestimonialsSection").then(m => ({ default: m.TestimonialsSection })));
@@ -18,8 +21,17 @@ const Footer = lazy(() => import("@/components/Footer").then(m => ({ default: m.
 const SectionFallback = () => <div className="min-h-[200px]" />;
 
 const Index = () => {
+  useHashScroll();
   return (
     <div className="min-h-screen">
+      <PageMeta
+        title="Best Homestay in Mukteshwar | Ecoescape Uttarakhand - Book Direct for Best Rates"
+        description="Book Ecoescape Mukteshwar - best boutique homestay in Mukteshwar, Uttarakhand with sunrise views, 100+ plant garden, in-house restaurant. Perfect for families, couples & workations."
+        canonical="https://ecoescapemukteshwar.com"
+        ogTitle="Ecoescape Mukteshwar | Boutique Homestay with Sunrise Views & Garden"
+        ogDescription="A Green Paradise in the Mountains. Boutique homestay with 100+ plant varieties, stunning sunrise views, in-house restaurant & terrace dining. Book direct for best rates."
+        jsonLd={reviewSchemas}
+      />
       <Header />
       <main>
         <HeroSection />

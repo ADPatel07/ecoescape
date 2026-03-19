@@ -1,97 +1,28 @@
+import { OptimizedImage } from "@/components/OptimizedImage";
 import { useMemo } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Users, Eye, Maximize, Coffee, Droplets, Wifi, BedDouble, Shield, Car } from "lucide-react";
-import roomDeluxe from "@/assets/room-deluxe.webp";
-import roomFamily from "@/assets/room-family.webp";
-import mountainView from "@/assets/suite/IMG_4065.webp";
-import spacious from "@/assets/suite/img123.webp";
+import { roomsConfig } from "@/config/rooms";
 import { trackBookingSubmit } from "@/lib/analytics";
 import { getCurrentPrice, formatPrice, type RoomType } from "@/services/pricing";
 
 // Room data without prices (prices added dynamically)
-const roomData = [
-  {
-    id: 1,
-    name: "Suite with Mountain View",
-    roomType: "suite" as RoomType,
-    description: "1 Bedroom Suite with Attached Washroom, Outside Sitting, Terrace and Garden Access. Stepless access - ideal for elderly guests.",
-    image: mountainView,
-    priceNote: "per night",
-    capacity: "2 Guests",
-    size: "280 sq ft",
-    view: "Sunrise View",
-    bedConfig: "King Bed",
-    features: [
-      "Stepless access - elderly friendly",
-      "East-facing sunrise views",
-      "Private bathroom with 24/7 hot water",
-      "Outside sitting area",
-      "Electric kettle with tea/coffee",
-      "High-speed WiFi",
-    ],
-  },
-  {
-    id: 2,
-    name: "Spacious Apartment",
-    roomType: "apartment" as RoomType,
-    description: "2 Bedrooms with Attached Washrooms, Living Area, Dining Area, Baywindow Sitting, Verandah outside room sitting, Terrace and Garden Access.",
-    image: spacious,
-    priceNote: "per night",
-    capacity: "4 Guests",
-    size: "550 sq ft",
-    view: "Mountain View",
-    bedConfig: "2 Queen Beds",
-    features: [
-      "2 bedrooms with attached washrooms",
-      "Living area with baywindow sitting",
-      "Dining area included",
-      "Verandah outside room",
-      "Terrace & garden access",
-      "Electric kettle with tea/coffee",
-    ],
-  },
-  {
-    id: 3,
-    name: "Family Room",
-    roomType: "familyRoom" as RoomType,
-    description: "2 Bedrooms (large and small), 1 washroom, dining area, private balcony, terrace and garden access. Perfect for families.",
-    image: roomFamily,
-    priceNote: "per night",
-    capacity: "4 Guests",
-    size: "450 sq ft",
-    view: "Mountain View",
-    bedConfig: "2 Bedrooms",
-    features: [
-      "2 bedrooms (large + small)",
-      "1 shared bathroom",
-      "Private balcony",
-      "Dining area included",
-      "Terrace & garden access",
-      "Electric kettle with tea/coffee",
-    ],
-  },
-  {
-    id: 4,
-    name: "Family Room 2",
-    roomType: "familyRoom2" as RoomType,
-    description: "1 Bedroom Quadruple with 2 king size double sharing beds, 1 washroom, private balcony, dining area, terrace and garden access.",
-    image: roomDeluxe,
-    priceNote: "per night",
-    capacity: "4 Guests",
-    size: "380 sq ft",
-    view: "Sunrise View",
-    bedConfig: "2 King Beds",
-    features: [
-      "2 king size double sharing beds",
-      "Private balcony",
-      "Dining area included",
-      "Terrace & garden access",
-      "Electric kettle with tea/coffee",
-      "High-speed WiFi",
-    ],
-  },
-];
+const roomData = roomsConfig.map((room) => ({
+  id: room.id,
+  name: room.name,
+  slug: room.slug,
+  roomType: room.roomType as RoomType,
+  description: room.shortDescription,
+  image: room.images[0],
+  priceNote: "per night",
+  capacity: room.capacity,
+  size: room.size,
+  view: room.view,
+  bedConfig: room.bedConfig,
+  features: room.features.slice(0, 6),
+}));
 
 const allRoomAmenities = [
   { icon: Shield, text: "Private entrance for each unit" },
@@ -161,11 +92,10 @@ export function RoomsSection() {
             >
               {/* Image */}
               <div className="relative h-64 overflow-hidden">
-                <img
+                <OptimizedImage
                   src={room.image}
-                  alt={room.name}
+                  alt={`${room.name} with mountain views at Ecoescape Mukteshwar`}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
                   width={600}
                   height={256}
                 />
@@ -213,14 +143,18 @@ export function RoomsSection() {
                   ))}
                 </ul>
 
-                <Button
-                  variant="hero"
-                  size="lg"
+                <Link
+                  to={`/rooms/${room.slug}`}
                   className="w-full"
-                  onClick={() => scrollToBooking(room.name)}
                 >
-                  Book This Room
-                </Button>
+                  <Button
+                    variant="hero"
+                    size="lg"
+                    className="w-full"
+                  >
+                    View Details
+                  </Button>
+                </Link>
               </div>
             </motion.div>
           ))}

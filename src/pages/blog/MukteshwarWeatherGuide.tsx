@@ -2,9 +2,12 @@ import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { FloatingCTA } from "@/components/FloatingCTA";
+import { PageMeta } from "@/seo/PageMeta";
+import { generateArticleSchema, generateBreadcrumbSchema, formatDateForSchema } from "@/lib/schema";
 import { ArrowLeft, Calendar, Clock, MessageCircle, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
+import gardenTerraceImg from "@/assets/garden-terrace.webp";
 
 const weatherData = [
   { month: "January", temp: "2°C – 15°C", weather: "Cold, clear skies, occasional frost", best: "Snow views, bonfire evenings", crowd: "Low" },
@@ -22,8 +25,40 @@ const weatherData = [
 ];
 
 export default function MukteshwarWeatherGuide() {
+  // Article Schema
+  const articleSchema = generateArticleSchema({
+    headline: "Weather in Mukteshwar 10 Days: Month-by-Month Guide (2026)",
+    image: "https://ecoescapemukteshwar.com/og-image.jpg",
+    datePublished: formatDateForSchema("March 2, 2026"),
+    author: {
+      "@type": "Organization",
+      name: "Ecoescape Mukteshwar",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Ecoescape Mukteshwar",
+      url: "https://ecoescapemukteshwar.com",
+    },
+    description: "Get the latest weather in Mukteshwar 10 days forecast, month-by-month temperature guides, and best time to visit for snow or pleasant sunshine in 2026.",
+    url: "https://ecoescapemukteshwar.com/blog/mukteshwar-weather-guide",
+  });
+
+  // Breadcrumb Schema
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", item: "https://ecoescapemukteshwar.com" },
+    { name: "Blog", item: "https://ecoescapemukteshwar.com/blog" },
+    { name: "Weather in Mukteshwar" },
+  ]);
+
   return (
     <div className="min-h-screen bg-background">
+      <PageMeta
+        title="Weather in Mukteshwar 10 Days | Temperature & Best Time to Visit (2026)"
+        description="Plan your trip with our latest Mukteshwar weather guide. Includes 10-day forecast insights, month-by-month temperature charts, and the best time for snow in 2026."
+        canonical="https://ecoescapemukteshwar.com/blog/mukteshwar-weather-guide"
+        keywords="weather in mukteshwar 10 days, Mukteshwar weather, best time to visit Mukteshwar, Mukteshwar temperature, temperature in mukteshwar, Uttarakhand weather"
+        jsonLd={[articleSchema, breadcrumbSchema]}
+      />
       <Header />
       <main className="pt-28 pb-20">
         <article className="container max-w-3xl">
@@ -37,20 +72,40 @@ export default function MukteshwarWeatherGuide() {
 
           <header className="mb-10">
             <span className="text-xs font-semibold uppercase tracking-wider text-primary">
-              Planning
+              Weather & Planning
             </span>
             <h1 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mt-3 mb-4 leading-tight">
-              Weather in Mukteshwar — Month-by-Month Guide for Planning Your Trip
+              Weather in Mukteshwar 10 Days: Month-by-Month Guide for Planning Your Trip (2026)
             </h1>
             <div className="flex items-center gap-4 text-sm text-muted-foreground">
               <span className="flex items-center gap-1">
-                <Calendar className="h-4 w-4" /> March 2, 2026
+                <Calendar className="h-4 w-4" /> March 19, 2026
               </span>
               <span className="flex items-center gap-1">
                 <Clock className="h-4 w-4" /> 6 min read
               </span>
             </div>
           </header>
+
+          {/* Featured Snippet Section */}
+          <div className="bg-primary/5 border-l-4 border-primary p-6 mb-10 rounded-r-xl">
+            <h2 className="text-lg font-semibold text-foreground mb-2">Quick Answer: Best Time to Visit Mukteshwar</h2>
+            <p className="text-muted-foreground leading-relaxed">
+              The <strong>best time to visit Mukteshwar</strong> is from <strong>March to June</strong> for pleasant weather and fruit blossoms, or <strong>October to November</strong> for the clearest Himalayan views. If you enjoy cold weather and potential snowfall, <strong>January and February</strong> are ideal months with temperatures ranging from 0°C to 15°C.
+            </p>
+          </div>
+
+          {/* Featured Image */}
+          <div className="mb-10 rounded-2xl overflow-hidden shadow-lg">
+            <img
+              src={gardenTerraceImg}
+              alt="Seasonal views of Mukteshwar showing the garden terrace"
+              className="w-full h-auto"
+              loading="eager"
+              width="1200"
+              height="675"
+            />
+          </div>
 
           <div className="prose prose-lg max-w-none text-foreground">
             <p className="text-lg leading-relaxed text-muted-foreground">
