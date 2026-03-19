@@ -23,10 +23,10 @@ export function HeroSection() {
       <div className="absolute inset-0">
         <img
           src={heroImage}
-          alt="Sunrise view from Ecoescape Mukteshwar terrace overlooking Himalayan mountains"
+          alt="Sunrise view over the Himalayan mountains from the terrace of Ecoescape Mukteshwar boutique homestay"
           className="w-full h-full object-cover"
           loading="eager"
-          fetchpriority="high"
+          fetchPriority="high"
           width={1920}
           height={1080}
           sizes="100vw"

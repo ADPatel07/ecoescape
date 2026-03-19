@@ -93,7 +93,7 @@ export function RoomsSection() {
               <div className="relative h-64 overflow-hidden">
                 <img
                   src={room.image}
-                  alt={room.name}
+                  alt={`${room.name} with mountain views at Ecoescape Mukteshwar`}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                   width={600}

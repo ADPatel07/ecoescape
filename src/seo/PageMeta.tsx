@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { useLocation } from "react-router-dom";
 import { siteUrl, defaultMeta, defaultSchema } from "./defaultMeta";
 
 /**
@@ -47,8 +48,13 @@ export function PageMeta({
   ogDescription,
   jsonLd,
 }: PageMetaProps) {
-  // Use the canonical URL or fallback to site URL
-  const fullCanonical = canonical ? (canonical.startsWith("http") ? canonical : `${siteUrl}${canonical}`) : siteUrl;
+  const location = useLocation();
+
+  // Use the canonical URL or fallback to site URL + current path
+  const currentPath = location.pathname === "/" ? "" : location.pathname;
+  const fullCanonical = canonical 
+    ? (canonical.startsWith("http") ? canonical : `${siteUrl}${canonical}`) 
+    : `${siteUrl}${currentPath}`;
 
   // Defaults from defaultMeta
   const finalOgImage = ogImage || defaultMeta.ogImage;
