@@ -14,8 +14,32 @@ import trekkingImg from "@/assets/blog/trekking/featured.png";
 import orchardsImg from "@/assets/blog/fruit-orchards/featured.png";
 import snowfallImg from "@/assets/blog/snowfall/featured.png";
 import itineraryImg from "@/assets/blog/itinerary/featured.png";
+import howToReachImg from "@/assets/blog/how-to-reach/featured.png";
+import cafesImg from "@/assets/blog/cafes/featured.png";
 
 const blogPosts = [
+  {
+    slug: "how-to-reach-mukteshwar-guide",
+    title: "How to Reach Mukteshwar: The Ultimate Transport Guide (2026)",
+    excerpt:
+      "Planning a trip to Mukteshwar? Our comprehensive 2026 guide covers how to reach Mukteshwar by train, road, and bus. Includes Delhi to Kathgodam details and local taxi tips.",
+    date: "March 19, 2026",
+    readTime: "8 min read",
+    image: howToReachImg,
+    imageAlt: "Scenic road winding through the Kumaon hills towards Mukteshwar",
+    category: "Travel Guide",
+  },
+  {
+    slug: "best-cafes-and-restaurants-in-mukteshwar",
+    title: "Best Cafes in Mukteshwar: A Foodie's Guide to Mountain Dining",
+    excerpt:
+      "Discover the best cafes and restaurants in Mukteshwar. From the famous Choco-House and Nirvana Cafe to authentic Kumaoni dining at Ecoescape, here is your ultimate foodie guide.",
+    date: "March 19, 2026",
+    readTime: "10 min read",
+    image: cafesImg,
+    imageAlt: "Terrace dining at Ecoescape Mukteshwar with panoramic mountain views",
+    category: "Food & Culture",
+  },
   {
     slug: "mukteshwar-snowfall-guide",
     title: "Snowfall in Mukteshwar: Your Ultimate Guide to a Winter Wonderland Experience",
