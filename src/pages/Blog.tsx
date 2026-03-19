@@ -10,8 +10,32 @@ import chauliKiJaliImg from "@/assets/blog/things-to-do/chauli-ki-jali.webp";
 import kumaoniFoodImg from "@/assets/blog/kumaoni-food-guide/kumaoni-thali.webp";
 import stargazingImg from "@/assets/blog/stargazing/featured.png";
 import birdwatchingImg from "@/assets/blog/birdwatching/featured.png";
+import trekkingImg from "@/assets/blog/trekking/featured.png";
+import orchardsImg from "@/assets/blog/fruit-orchards/featured.png";
 
 const blogPosts = [
+  {
+    slug: "mukteshwar-trekking-guide",
+    title: "Mukteshwar Trekking Guide: 5 Best Trails for Adventure & Nature Lovers",
+    excerpt:
+      "Discover the best trekking trails in Mukteshwar. From the Bhalu Gaad waterfall to scenic forest walks, explore the top hiking paths near Ecoescape Mukteshwar.",
+    date: "March 19, 2026",
+    readTime: "8 min read",
+    image: trekkingImg,
+    imageAlt: "Beautiful trekking trail in Mukteshwar with Himalayan views and lush forests",
+    category: "Adventure",
+  },
+  {
+    slug: "fruit-orchards-of-mukteshwar-guide",
+    title: "Fruit Orchards of Mukteshwar: A Guide to Apple, Peach & Plum Seasons",
+    excerpt:
+      "Explore the 'Fruit Bowl of Kumaon'. Our guide to Mukteshwar's fruit orchards covers the best seasons for apple, peach, and plum harvests and how to enjoy the experience.",
+    date: "March 19, 2026",
+    readTime: "7 min read",
+    image: orchardsImg,
+    imageAlt: "Lush fruit orchard in Mukteshwar with ripe fruits on trees and clear blue sky",
+    category: "Nature & Culture",
+  },
   {
     slug: "stargazing-in-mukteshwar",
     title: "Stargazing in Mukteshwar: A Complete Guide to the Night Sky at Ecoescape",
