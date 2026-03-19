@@ -18,6 +18,8 @@ const StargazingGuide = lazy(() => import("./pages/blog/StargazingGuide"));
 const BirdwatchingGuide = lazy(() => import("./pages/blog/BirdwatchingGuide"));
 const TrekkingGuide = lazy(() => import("./pages/blog/TrekkingGuide"));
 const FruitOrchardsGuide = lazy(() => import("./pages/blog/FruitOrchardsGuide"));
+const SnowfallGuide = lazy(() => import("./pages/blog/SnowfallGuide"));
+const WeekendItinerary = lazy(() => import("./pages/blog/WeekendItinerary"));
 const SuiteWithMountainView = lazy(() => import("./pages/rooms/SuiteWithMountainView"));
 const SpaciousApartment = lazy(() => import("./pages/rooms/SpaciousApartment"));
 const FamilyRoom = lazy(() => import("./pages/rooms/FamilyRoom"));
@@ -43,6 +45,8 @@ const App = () => (
             <Route path="/blog/birdwatching-in-mukteshwar-guide" element={<Suspense fallback={<div className="min-h-screen" />}><BirdwatchingGuide /></Suspense>} />
             <Route path="/blog/mukteshwar-trekking-guide" element={<Suspense fallback={<div className="min-h-screen" />}><TrekkingGuide /></Suspense>} />
             <Route path="/blog/fruit-orchards-of-mukteshwar-guide" element={<Suspense fallback={<div className="min-h-screen" />}><FruitOrchardsGuide /></Suspense>} />
+            <Route path="/blog/mukteshwar-snowfall-guide" element={<Suspense fallback={<div className="min-h-screen" />}><SnowfallGuide /></Suspense>} />
+            <Route path="/blog/mukteshwar-weekend-itinerary" element={<Suspense fallback={<div className="min-h-screen" />}><WeekendItinerary /></Suspense>} />
             <Route path="/rooms/suite-with-mountain-view" element={<Suspense fallback={<div className="min-h-screen" />}><SuiteWithMountainView /></Suspense>} />
             <Route path="/rooms/spacious-apartment" element={<Suspense fallback={<div className="min-h-screen" />}><SpaciousApartment /></Suspense>} />
             <Route path="/rooms/family-room" element={<Suspense fallback={<div className="min-h-screen" />}><FamilyRoom /></Suspense>} />

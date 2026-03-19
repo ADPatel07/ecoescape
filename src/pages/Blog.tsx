@@ -12,8 +12,32 @@ import stargazingImg from "@/assets/blog/stargazing/featured.png";
 import birdwatchingImg from "@/assets/blog/birdwatching/featured.png";
 import trekkingImg from "@/assets/blog/trekking/featured.png";
 import orchardsImg from "@/assets/blog/fruit-orchards/featured.png";
+import snowfallImg from "@/assets/blog/snowfall/featured.png";
+import itineraryImg from "@/assets/blog/itinerary/featured.png";
 
 const blogPosts = [
+  {
+    slug: "mukteshwar-snowfall-guide",
+    title: "Snowfall in Mukteshwar: Your Ultimate Guide to a Winter Wonderland Experience",
+    excerpt:
+      "Experience the magic of snowfall in Mukteshwar. Our guide covers the best months for snow, top viewing spots, winter packing essentials, and what to expect during a winter trip.",
+    date: "March 19, 2026",
+    readTime: "10 min read",
+    image: snowfallImg,
+    imageAlt: "Mukteshwar village covered in thick white snow with Himalayan peaks in the background",
+    category: "Seasonal Guide",
+  },
+  {
+    slug: "mukteshwar-weekend-itinerary",
+    title: "Mukteshwar 2-Day Itinerary: The Perfect Weekend Getaway from Delhi",
+    excerpt:
+      "Planning a quick trip to Mukteshwar? Our 2-day itinerary covers the best sights, adventure activities, and local dining for a perfect weekend getaway from Delhi/NCR.",
+    date: "March 19, 2026",
+    readTime: "8 min read",
+    image: itineraryImg,
+    imageAlt: "A scenic montage of Mukteshwar trip with Himalayan views and cozy stay",
+    category: "Travel Plan",
+  },
   {
     slug: "mukteshwar-trekking-guide",
     title: "Mukteshwar Trekking Guide: 5 Best Trails for Adventure & Nature Lovers",
