@@ -17,7 +17,11 @@ export const trackBookingSubmit = (data: { roomType: string; guests: string }) =
     window.gtag('event', 'generate_lead', {
       currency: 'INR',
       value: 0, // Can be enhanced with estimated value
-      items: [{ item_id: data.roomType, item_name: data.roomType, quantity: 1, }]
+      items: [{
+        item_id: data.roomType,
+        item_name: data.roomType,
+        quantity: 1,
+      }]
     });
   }
 };
