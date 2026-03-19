@@ -3,7 +3,6 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { FloatingCTA } from "@/components/FloatingCTA";
 import { PageMeta } from "@/seo/PageMeta";
-import { SchemaInjector } from "@/components/SchemaInjector";
 import { generateArticleSchema, generateBreadcrumbSchema, formatDateForSchema } from "@/lib/schema";
 import { ArrowLeft, Calendar, Clock, MessageCircle, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -58,8 +57,8 @@ export default function MukteshwarWeatherGuide() {
         description="Planning a trip to Mukteshwar? Know when to go — monthly weather breakdown, best seasons, packing tips, and monsoon alerts. Perfect for Uttarakhand travel planning."
         canonical="https://ecoescapemukteshwar.com/blog/mukteshwar-weather-guide"
         keywords="Mukteshwar weather, best time to visit Mukteshwar, Mukteshwar monsoon, Uttarakhand weather, Mukteshwar temperature, when to visit Mukteshwar"
+        jsonLd={[articleSchema, breadcrumbSchema]}
       />
-      <SchemaInjector schemas={[articleSchema, breadcrumbSchema]} />
       <Header />
       <main className="pt-28 pb-20">
         <article className="container max-w-3xl">

@@ -4,7 +4,9 @@ import { HeroSection } from "@/components/HeroSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
 import { FloatingCTA } from "@/components/FloatingCTA";
 import { PageMeta } from "@/seo/PageMeta";
+import { defaultSchema } from "@/seo/defaultMeta";
 import { useHashScroll } from "@/hooks/useHashScroll";
+import { reviewSchemas } from "@/config/testimonials";
 
 const RoomsSection = lazy(() => import("@/components/RoomsSection").then(m => ({ default: m.RoomsSection })));
 const TestimonialsSection = lazy(() => import("@/components/TestimonialsSection").then(m => ({ default: m.TestimonialsSection })));
@@ -29,6 +31,7 @@ const Index = () => {
         canonical="https://ecoescapemukteshwar.com"
         ogTitle="Ecoescape Mukteshwar | Boutique Homestay with Sunrise Views & Garden"
         ogDescription="A Green Paradise in the Mountains. Boutique homestay with 100+ plant varieties, stunning sunrise views, in-house restaurant & terrace dining. Book direct for best rates."
+        jsonLd={[defaultSchema, ...reviewSchemas]}
       />
       <Header />
       <main>

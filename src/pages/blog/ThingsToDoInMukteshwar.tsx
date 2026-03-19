@@ -3,9 +3,8 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { FloatingCTA } from "@/components/FloatingCTA";
 import { PageMeta } from "@/seo/PageMeta";
-import { SchemaInjector } from "@/components/SchemaInjector";
 import { generateArticleSchema, generateBreadcrumbSchema, formatDateForSchema } from "@/lib/schema";
-import { ArrowLeft, Calendar, Clock, MapPin, Phone, MessageCircle, Mountain, Trees, Utensils, Sparkles, Zap } from "lucide-react";
+import { ArrowLeft, Calendar, Clock, MapPin, Phone, MessageCircle, Mountain, Trees, Sparkles, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
 import mukteshwarOverviewImg from "@/assets/blog/things-to-do/mukteshwar-overview.webp";
@@ -49,8 +48,8 @@ export default function ThingsToDoInMukteshwar() {
         description="Discover the best things to do in Mukteshwar - ancient temples, adventure sports, Himalayan viewpoints, nature trails, and cultural experiences. Complete guide with distances from Ecoescape Mukteshwar."
         canonical="https://ecoescapemukteshwar.com/blog/things-to-do-in-mukteshwar"
         keywords="things to do in Mukteshwar, places to visit in Mukteshwar, Mukteshwar attractions, Mukteshwar tourist places, Mukteshwar sightseeing, weekend getaways near Delhi, Kumaon tourism, Uttarakhand travel guide"
+        jsonLd={[articleSchema, breadcrumbSchema]}
       />
-      <SchemaInjector schemas={[articleSchema, breadcrumbSchema]} />
       <Header />
       <main className="pt-28 pb-20">
         <article className="container max-w-3xl">

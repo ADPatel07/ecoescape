@@ -3,7 +3,6 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { FloatingCTA } from "@/components/FloatingCTA";
 import { PageMeta } from "@/seo/PageMeta";
-import { SchemaInjector } from "@/components/SchemaInjector";
 import { generateArticleSchema, generateBreadcrumbSchema, formatDateForSchema } from "@/lib/schema";
 import { ArrowLeft, Calendar, Clock, MapPin, Phone, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -43,8 +42,8 @@ export default function MukteshwarTempleGuide() {
         description="Plan your visit to Mukteshwar Mahadev Temple (7 km from Ecoescape). Discover temple timings, history, how to reach, and best places to stay in Mukteshwar. Includes travel tips for Uttarakhand pilgrims."
         canonical="https://ecoescapemukteshwar.com/blog/mukteshwar-mahadev-temple-guide"
         keywords="Mukteshwar Mahadev Temple, Mukteshwar Dham, Mukteshwar temple guide, Uttarakhand temples, places to visit Mukteshwar, stay near Mukteshwar temple"
+        jsonLd={[articleSchema, breadcrumbSchema]}
       />
-      <SchemaInjector schemas={[articleSchema, breadcrumbSchema]} />
       <Header />
       <main className="pt-28 pb-20">
         <article className="container max-w-3xl">

@@ -3,7 +3,6 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { FloatingCTA } from "@/components/FloatingCTA";
 import { PageMeta } from "@/seo/PageMeta";
-import { SchemaInjector } from "@/components/SchemaInjector";
 import { generateLodgingReservationSchema, generateBreadcrumbSchema } from "@/lib/schema";
 import { getRoomBySlug, getAllRooms } from "@/config/rooms";
 import { ArrowLeft, Users, Maximize, Eye, BedDouble, Coffee, Wifi, Droplets, Shield, Phone, MessageCircle, MapPin, Star, CheckCircle2 } from "lucide-react";
@@ -50,8 +49,8 @@ export default function FamilyRoom() {
         canonical={`https://ecoescapemukteshwar.com/rooms/${room.slug}`}
         keywords={room.keywords}
         ogImage={room.images[0]}
+        jsonLd={[lodgingSchema, breadcrumbSchema]}
       />
-      <SchemaInjector schemas={[lodgingSchema, breadcrumbSchema]} />
       <Header />
 
       <main className="pt-28 pb-20">

@@ -3,9 +3,8 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { FloatingCTA } from "@/components/FloatingCTA";
 import { PageMeta } from "@/seo/PageMeta";
-import { SchemaInjector } from "@/components/SchemaInjector";
 import { generateArticleSchema, generateBreadcrumbSchema, generateRestaurantSchema, formatDateForSchema } from "@/lib/schema";
-import { ArrowLeft, Calendar, Clock, MapPin, Phone, MessageCircle, Utensils, ChefHat, Leaf, Star, Flame } from "lucide-react";
+import { ArrowLeft, Calendar, Clock, Phone, MessageCircle, Utensils, ChefHat, Leaf, Star, Flame } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
 import kumaoniThaliImg from "@/assets/blog/kumaoni-food-guide/kumaoni-thali.webp";
@@ -49,8 +48,8 @@ export default function KumaoniFoodGuide() {
         description="Discover authentic Kumaoni food in Mukteshwar - 12 traditional dishes, local ingredients, best restaurants, terrace dining experiences, and Uttarakhand cuisine guide. Taste the Himalayas!"
         canonical="https://ecoescapemukteshwar.com/blog/kumaoni-food-guide"
         keywords="Kumaoni food, Mukteshwar restaurants, Uttarakhand cuisine, traditional Kumaoni dishes, Kumaoni thali, bhat ki churkani, bal mithai, kafuli, baadi, Kumaon food culture, authentic Kumaoni food, where to eat in Mukteshwar, Himalayan cuisine"
+        jsonLd={[articleSchema, breadcrumbSchema, restaurantSchema]}
       />
-      <SchemaInjector schemas={[articleSchema, breadcrumbSchema, restaurantSchema]} />
       <Header />
       <main className="pt-28 pb-20">
         <article className="container max-w-3xl">

@@ -29,6 +29,7 @@ interface PageMetaProps {
   noindex?: boolean;
   ogTitle?: string;
   ogDescription?: string;
+  jsonLd?: Record<string, any> | Array<Record<string, any>>;
 }
 
 export function PageMeta({
@@ -44,6 +45,7 @@ export function PageMeta({
   noindex = false,
   ogTitle,
   ogDescription,
+  jsonLd,
 }: PageMetaProps) {
   // Use the canonical URL or fallback to site URL
   const fullCanonical = canonical ? (canonical.startsWith("http") ? canonical : `${siteUrl}${canonical}`) : siteUrl;
@@ -84,6 +86,13 @@ export function PageMeta({
       <meta name="twitter:title" content={finalOgTitle} />
       <meta name="twitter:description" content={finalOgDescription} />
       {finalOgImage && <meta name="twitter:image" content={finalOgImage} />}
+
+      {/* Structured Data (JSON-LD) */}
+      {jsonLd && (
+        <script type="application/ld+json">
+          {JSON.stringify(jsonLd)}
+        </script>
+      )}
     </Helmet>
   );
 }
