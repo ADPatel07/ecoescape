@@ -8,8 +8,32 @@ import heroSunriseImg from "@/assets/hero-sunrise.webp";
 import gardenTerraceImg from "@/assets/garden-terrace.webp";
 import chauliKiJaliImg from "@/assets/blog/things-to-do/chauli-ki-jali.webp";
 import kumaoniFoodImg from "@/assets/blog/kumaoni-food-guide/kumaoni-thali.webp";
+import stargazingImg from "@/assets/blog/stargazing/featured.png";
+import birdwatchingImg from "@/assets/blog/birdwatching/featured.png";
 
 const blogPosts = [
+  {
+    slug: "stargazing-in-mukteshwar",
+    title: "Stargazing in Mukteshwar: A Complete Guide to the Night Sky at Ecoescape",
+    excerpt:
+      "Discover the magic of the Himalayan night sky. Our guide to stargazing in Mukteshwar covers the best times to visit, what to see, and why Ecoescape is the perfect dark-sky retreat.",
+    date: "March 19, 2026",
+    readTime: "8 min read",
+    image: stargazingImg,
+    imageAlt: "The Milky Way over the Himalayan mountains in Mukteshwar, as seen from Ecoescape terrace",
+    category: "Activity",
+  },
+  {
+    slug: "birdwatching-in-mukteshwar-guide",
+    title: "Birdwatching in Mukteshwar: A Paradise for Nature Lovers & Birders",
+    excerpt:
+      "Explore the rich avian diversity of Mukteshwar. From the colorful Himalayan Monal to the elusive Laughingthrush, discover the best birding trails around Ecoescape.",
+    date: "March 19, 2026",
+    readTime: "10 min read",
+    image: birdwatchingImg,
+    imageAlt: "Himalayan Monal perched in a misty Mukteshwar forest",
+    category: "Nature",
+  },
   {
     slug: "kumaoni-food-guide",
     title: "Kumaoni Food Guide: Traditional Cuisine & Dining in Mukteshwar | Ecoescape",

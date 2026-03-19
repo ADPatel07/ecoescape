@@ -14,6 +14,8 @@ const KumaoniFoodGuide = lazy(() => import("./pages/blog/KumaoniFoodGuide"));
 const ThingsToDoInMukteshwar = lazy(() => import("./pages/blog/ThingsToDoInMukteshwar"));
 const MukteshwarTempleGuide = lazy(() => import("./pages/blog/MukteshwarTempleGuide"));
 const MukteshwarWeatherGuide = lazy(() => import("./pages/blog/MukteshwarWeatherGuide"));
+const StargazingGuide = lazy(() => import("./pages/blog/StargazingGuide"));
+const BirdwatchingGuide = lazy(() => import("./pages/blog/BirdwatchingGuide"));
 const SuiteWithMountainView = lazy(() => import("./pages/rooms/SuiteWithMountainView"));
 const SpaciousApartment = lazy(() => import("./pages/rooms/SpaciousApartment"));
 const FamilyRoom = lazy(() => import("./pages/rooms/FamilyRoom"));
@@ -35,6 +37,8 @@ const App = () => (
             <Route path="/blog/things-to-do-in-mukteshwar" element={<Suspense fallback={<div className="min-h-screen" />}><ThingsToDoInMukteshwar /></Suspense>} />
             <Route path="/blog/mukteshwar-mahadev-temple-guide" element={<Suspense fallback={<div className="min-h-screen" />}><MukteshwarTempleGuide /></Suspense>} />
             <Route path="/blog/mukteshwar-weather-guide" element={<Suspense fallback={<div className="min-h-screen" />}><MukteshwarWeatherGuide /></Suspense>} />
+            <Route path="/blog/stargazing-in-mukteshwar" element={<Suspense fallback={<div className="min-h-screen" />}><StargazingGuide /></Suspense>} />
+            <Route path="/blog/birdwatching-in-mukteshwar-guide" element={<Suspense fallback={<div className="min-h-screen" />}><BirdwatchingGuide /></Suspense>} />
             <Route path="/rooms/suite-with-mountain-view" element={<Suspense fallback={<div className="min-h-screen" />}><SuiteWithMountainView /></Suspense>} />
             <Route path="/rooms/spacious-apartment" element={<Suspense fallback={<div className="min-h-screen" />}><SpaciousApartment /></Suspense>} />
             <Route path="/rooms/family-room" element={<Suspense fallback={<div className="min-h-screen" />}><FamilyRoom /></Suspense>} />
