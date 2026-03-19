@@ -30,6 +30,16 @@ const MonsoonGuide = lazy(() => import("./pages/blog/MonsoonGuide"));
 const PhotographySpotsGuide = lazy(() => import("./pages/blog/PhotographySpotsGuide"));
 const LocalFestivalsGuide = lazy(() => import("./pages/blog/LocalFestivalsGuide"));
 const PackingListGuide = lazy(() => import("./pages/blog/PackingListGuide"));
+const KainchiDhamToMukteshwar = lazy(() => import("./pages/blog/KainchiDhamToMukteshwar"));
+const MukteshwarToNainitalDayTrip = lazy(() => import("./pages/blog/MukteshwarToNainitalDayTrip"));
+const BestResortsInMukteshwar = lazy(() => import("./pages/blog/BestResortsInMukteshwar"));
+const SpiritualKumaonGuide = lazy(() => import("./pages/blog/SpiritualKumaonGuide"));
+const BhaluGaadWaterfallTrek = lazy(() => import("./pages/blog/BhaluGaadWaterfallTrek"));
+const BackpackerMukteshwarGuide = lazy(() => import("./pages/blog/BackpackerMukteshwarGuide"));
+const MukteshwarMahadevHistory = lazy(() => import("./pages/blog/MukteshwarMahadevHistory"));
+const DelhiToMukteshwarRoadTrip = lazy(() => import("./pages/blog/DelhiToMukteshwarRoadTrip"));
+const MukteshwarOffbeatPlaces = lazy(() => import("./pages/blog/MukteshwarOffbeatPlaces"));
+const MukteshwarSpringGuide = lazy(() => import("./pages/blog/MukteshwarSpringGuide"));
 const SuiteWithMountainView = lazy(() => import("./pages/rooms/SuiteWithMountainView"));
 const SpaciousApartment = lazy(() => import("./pages/rooms/SpaciousApartment"));
 const FamilyRoom = lazy(() => import("./pages/rooms/FamilyRoom"));
@@ -67,6 +77,16 @@ const App = () => (
             <Route path="/blog/best-photography-spots-in-mukteshwar" element={<Suspense fallback={<div className="min-h-screen" />}><PhotographySpotsGuide /></Suspense>} />
             <Route path="/blog/local-festivals-and-culture-guide" element={<Suspense fallback={<div className="min-h-screen" />}><LocalFestivalsGuide /></Suspense>} />
             <Route path="/blog/mukteshwar-ultimate-packing-list" element={<Suspense fallback={<div className="min-h-screen" />}><PackingListGuide /></Suspense>} />
+            <Route path="/blog/kainchi-dham-to-mukteshwar-distance" element={<Suspense fallback={<div className="min-h-screen" />}><KainchiDhamToMukteshwar /></Suspense>} />
+            <Route path="/blog/mukteshwar-to-nainital-day-trip" element={<Suspense fallback={<div className="min-h-screen" />}><MukteshwarToNainitalDayTrip /></Suspense>} />
+            <Route path="/blog/best-resorts-in-mukteshwar" element={<Suspense fallback={<div className="min-h-screen" />}><BestResortsInMukteshwar /></Suspense>} />
+            <Route path="/blog/spiritual-kumaon-guide" element={<Suspense fallback={<div className="min-h-screen" />}><SpiritualKumaonGuide /></Suspense>} />
+            <Route path="/blog/bhalu-gaad-waterfall-trek" element={<Suspense fallback={<div className="min-h-screen" />}><BhaluGaadWaterfallTrek /></Suspense>} />
+            <Route path="/blog/mukteshwar-backpacker-guide" element={<Suspense fallback={<div className="min-h-screen" />}><BackpackerMukteshwarGuide /></Suspense>} />
+            <Route path="/blog/mukteshwar-mahadev-temple-history" element={<Suspense fallback={<div className="min-h-screen" />}><MukteshwarMahadevHistory /></Suspense>} />
+            <Route path="/blog/delhi-to-mukteshwar-road-trip" element={<Suspense fallback={<div className="min-h-screen" />}><DelhiToMukteshwarRoadTrip /></Suspense>} />
+            <Route path="/blog/offbeat-places-in-mukteshwar" element={<Suspense fallback={<div className="min-h-screen" />}><MukteshwarOffbeatPlaces /></Suspense>} />
+            <Route path="/blog/spring-in-mukteshwar-guide" element={<Suspense fallback={<div className="min-h-screen" />}><MukteshwarSpringGuide /></Suspense>} />
             <Route path="/rooms/suite-with-mountain-view" element={<Suspense fallback={<div className="min-h-screen" />}><SuiteWithMountainView /></Suspense>} />
             <Route path="/rooms/spacious-apartment" element={<Suspense fallback={<div className="min-h-screen" />}><SpaciousApartment /></Suspense>} />
             <Route path="/rooms/family-room" element={<Suspense fallback={<div className="min-h-screen" />}><FamilyRoom /></Suspense>} />

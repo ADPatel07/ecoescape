@@ -12,7 +12,7 @@ import howToReachFeaturedImg from "@/assets/blog/how-to-reach/featured.png";
 export default function HowToReachGuide() {
   // Article Schema
   const articleSchema = generateArticleSchema({
-    headline: "How to Reach Mukteshwar: The Ultimate Transport Guide (2026)",
+    headline: "How to Reach Mukteshwar: Delhi to Mukteshwar Distance & Travel Guide (2026)",
     image: "https://ecoescapemukteshwar.com/src/assets/blog/how-to-reach/featured.png",
     datePublished: formatDateForSchema("March 19, 2026"),
     author: {
@@ -24,7 +24,7 @@ export default function HowToReachGuide() {
       name: "Ecoescape Mukteshwar",
       url: "https://ecoescapemukteshwar.com",
     },
-    description: "Planning a trip to Mukteshwar? Our comprehensive 2026 guide covers how to reach Mukteshwar by train, road, and bus. Includes Delhi to Kathgodam details and local taxi tips.",
+    description: "Planning a trip? Get the exact Delhi to Mukteshwar distance, train details to Kathgodam, and the best route from Kainchi Dham to Mukteshwar in this 2026 guide.",
     url: "https://ecoescapemukteshwar.com/blog/how-to-reach-mukteshwar-guide",
   });
 
@@ -38,10 +38,10 @@ export default function HowToReachGuide() {
   return (
     <div className="min-h-screen bg-background">
       <PageMeta
-        title="How to Reach Mukteshwar | 2026 Delhi to Mukteshwar Transport Guide"
-        description="Plan your journey to the hills easily. Complete guide on reaching Mukteshwar by train (Kathgodam), road, and bus. Includes taxi fares and driving tips."
+        title="Delhi to Mukteshwar Distance | How to Reach Mukteshwar (2026 Guide)"
+        description="Complete 2026 guide on reaching Mukteshwar. Includes Delhi to Mukteshwar distance, Kathgodam train schedules, taxi fares, and routes from Kainchi Dham."
         canonical="https://ecoescapemukteshwar.com/blog/how-to-reach-mukteshwar-guide"
-        keywords="how to reach Mukteshwar, Delhi to Mukteshwar, Kathgodam to Mukteshwar taxi, Delhi to Kathgodam train, Mukteshwar distance from Delhi, reaching Mukteshwar by road"
+        keywords="delhi to mukteshwar distance, mukteshwar distance, how to reach mukteshwar, kainchi dham to mukteshwar distance, delhi to kathgodam train, kathgodam to mukteshwar taxi"
         jsonLd={[articleSchema, breadcrumbSchema]}
       />
       <Header />
@@ -57,10 +57,10 @@ export default function HowToReachGuide() {
 
           <header className="mb-10">
             <span className="text-xs font-semibold uppercase tracking-wider text-primary">
-              Travel Guide
+              Travel & Logistics
             </span>
             <h1 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mt-3 mb-4 leading-tight">
-              How to Reach Mukteshwar: The Ultimate Transport Guide (2026)
+              How to Reach Mukteshwar: Delhi to Mukteshwar Distance & Transport Guide (2026)
             </h1>
             <div className="flex items-center gap-4 text-sm text-muted-foreground">
               <span className="flex items-center gap-1">
@@ -71,6 +71,17 @@ export default function HowToReachGuide() {
               </span>
             </div>
           </header>
+
+          {/* Featured Snippet Section */}
+          <div className="bg-primary/5 border-l-4 border-primary p-6 mb-10 rounded-r-xl">
+            <h2 className="text-lg font-semibold text-foreground mb-2">Distance Overview: Getting to Mukteshwar</h2>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              <li>📍 <strong>Delhi to Mukteshwar distance:</strong> ~340 km (8-9 hours drive)</li>
+              <li>📍 <strong>Kathgodam to Mukteshwar distance:</strong> 65 km (2.5 hours drive)</li>
+              <li>📍 <strong>Nainital to Mukteshwar distance:</strong> 50 km (1.5-2 hours drive)</li>
+              <li>📍 <strong>Kainchi Dham to Mukteshwar distance:</strong> 42 km (1.5 hours drive)</li>
+            </ul>
+          </div>
 
           <div className="mb-10 rounded-2xl overflow-hidden shadow-lg">
             <img

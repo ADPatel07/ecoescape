@@ -12,7 +12,7 @@ const heroSunriseImg = "/images/hero-sunrise.webp";
 export default function MukteshwarTempleGuide() {
   // Article Schema
   const articleSchema = generateArticleSchema({
-    headline: "Mukteshwar Mahadev Temple — Complete Visitor Guide & Where to Stay in Mukteshwar",
+    headline: "Mukteshwar Dham Temple: A Guide to Mukteshwar Mahadev Mandir (2026)",
     image: "https://ecoescapemukteshwar.com/og-image.jpg",
     datePublished: formatDateForSchema("March 5, 2026"),
     author: {
@@ -24,7 +24,7 @@ export default function MukteshwarTempleGuide() {
       name: "Ecoescape Mukteshwar",
       url: "https://ecoescapemukteshwar.com",
     },
-    description: "Discover the ancient Mukteshwar Mahadev Temple, its history, timings, how to reach, and the best places to stay nearby for a memorable Himalayan pilgrimage.",
+    description: "Visit the ancient Mukteshwar Dham. Complete 2026 guide to Mukteshwar Mahadev Mandir, including history, temple timings, rituals, and how to reach from Nainital.",
     url: "https://ecoescapemukteshwar.com/blog/mukteshwar-mahadev-temple-guide",
   });
 
@@ -32,16 +32,16 @@ export default function MukteshwarTempleGuide() {
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: "Home", item: "https://ecoescapemukteshwar.com" },
     { name: "Blog", item: "https://ecoescapemukteshwar.com/blog" },
-    { name: "Mukteshwar Mahadev Temple Guide" },
+    { name: "Mukteshwar Dham Guide" },
   ]);
 
   return (
     <div className="min-h-screen bg-background">
       <PageMeta
-        title="Mukteshwar Mahadev Temple Guide | Timings, History & Best Stays"
-        description="Visit the ancient Mukteshwar Mahadev Temple (7 km from Ecoescape). Your complete 2026 guide to temple history, timings, and stunning Himalayan sunrise views."
+        title="Mukteshwar Dham Temple | Mukteshwar Mahadev Mandir Guide (2026)"
+        description="Plan your pilgrimage to Mukteshwar Dham. Explore the 350-year-old Mukteshwar Mahadev Mandir, get temple timings, and discover the legend of Chauli Ki Jali."
         canonical="https://ecoescapemukteshwar.com/blog/mukteshwar-mahadev-temple-guide"
-        keywords="Mukteshwar Mahadev Temple, Mukteshwar Dham, Mukteshwar temple guide, Uttarakhand temples, places to visit Mukteshwar, stay near Mukteshwar temple"
+        keywords="Mukteshwar Dham, Mukteshwar Mahadev Mandir, Mukteshwar temple, Mukteshwar dham temple, Mukteshwar mandir, Uttarakhand spiritual tourism"
         jsonLd={[articleSchema, breadcrumbSchema]}
       />
       <Header />
@@ -59,20 +59,28 @@ export default function MukteshwarTempleGuide() {
           {/* Header */}
           <header className="mb-10">
             <span className="text-xs font-semibold uppercase tracking-wider text-primary">
-              Travel Guide
+              Spiritual Tourism
             </span>
             <h1 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mt-3 mb-4 leading-tight">
-              Mukteshwar Mahadev Temple — Complete Visitor Guide & Where to Stay in Mukteshwar
+              Mukteshwar Dham Temple: A Complete Guide to Mukteshwar Mahadev Mandir (2026)
             </h1>
             <div className="flex items-center gap-4 text-sm text-muted-foreground">
               <span className="flex items-center gap-1">
-                <Calendar className="h-4 w-4" /> March 5, 2026
+                <Calendar className="h-4 w-4" /> March 19, 2026
               </span>
               <span className="flex items-center gap-1">
                 <Clock className="h-4 w-4" /> 8 min read
               </span>
             </div>
           </header>
+
+          {/* Featured Snippet Section */}
+          <div className="bg-primary/5 border-l-4 border-primary p-6 mb-10 rounded-r-xl">
+            <h2 className="text-lg font-semibold text-foreground mb-2">About Mukteshwar Dham</h2>
+            <p className="text-muted-foreground leading-relaxed">
+              <strong>Mukteshwar Dham</strong> is a 350-year-old temple dedicated to Lord Shiva, located at 2,285m in the Kumaon hills. It is famous for its ancient Shiva Lingam and the adjacent <strong>Chauli Ki Jali</strong> cliffs. Most pilgrims visit the <strong>Mukteshwar Mahadev Mandir</strong> for spiritual liberation (Mukti) and stunning Himalayan views.
+            </p>
+          </div>
 
           {/* Featured Image */}
           <div className="mb-10 rounded-2xl overflow-hidden shadow-lg">

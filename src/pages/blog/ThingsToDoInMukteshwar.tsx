@@ -18,9 +18,9 @@ import fruitOrchardImg from "@/assets/blog/things-to-do/fruit-orchard.webp";
 export default function ThingsToDoInMukteshwar() {
   // Article Schema
   const articleSchema = generateArticleSchema({
-    headline: "Things to Do in Mukteshwar | 15 Must-Visit Attractions & Hidden Gems (2026)",
+    headline: "15 Best Places to Visit in Mukteshwar: Tourism & Sightseeing Guide (2026)",
     image: "https://ecoescapemukteshwar.com/og-image.jpg",
-    datePublished: formatDateForSchema("March 18, 2026"),
+    datePublished: formatDateForSchema("March 19, 2026"),
     author: {
       "@type": "Organization",
       name: "Ecoescape Mukteshwar",
@@ -30,7 +30,7 @@ export default function ThingsToDoInMukteshwar() {
       name: "Ecoescape Mukteshwar",
       url: "https://ecoescapemukteshwar.com",
     },
-    description: "Discover the best things to do in Mukteshwar - from ancient temples and adventure sports to scenic viewpoints and cultural experiences. Complete 2026 guide with distances and tips.",
+    description: "Looking for the best places to visit in Mukteshwar? Explore our 2026 guide to Mukteshwar Dham, Bhalu Gaad Waterfall, and more attractions for a perfect trip.",
     url: "https://ecoescapemukteshwar.com/blog/things-to-do-in-mukteshwar",
   });
 
@@ -38,16 +38,16 @@ export default function ThingsToDoInMukteshwar() {
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: "Home", item: "https://ecoescapemukteshwar.com" },
     { name: "Blog", item: "https://ecoescapemukteshwar.com/blog" },
-    { name: "Things to Do in Mukteshwar" },
+    { name: "Places to Visit in Mukteshwar" },
   ]);
 
   return (
     <div className="min-h-screen bg-background">
       <PageMeta
-        title="15 Best Things to Do in Mukteshwar | 2026 Tourist Attractions Guide"
-        description="Discover the top things to do in Mukteshwar — ancient temples, adventure sports, mountain trails, and cultural experiences. Your complete 2026 sightseeing guide."
+        title="15 Best Places to Visit in Mukteshwar | 2026 Sightseeing Guide"
+        description="Discover the top places to visit in Mukteshwar - from the ancient Mukteshwar Dham to the hidden Bhalu Gaad Waterfall. Your complete 2026 tourist guide."
         canonical="https://ecoescapemukteshwar.com/blog/things-to-do-in-mukteshwar"
-        keywords="things to do in Mukteshwar, places to visit in Mukteshwar, Mukteshwar attractions, Mukteshwar tourist places, Mukteshwar sightseeing, weekend getaways near Delhi, Kumaon tourism, Uttarakhand travel guide"
+        keywords="places to visit in mukteshwar, mukteshwar waterfall, bhalu gaad waterfall, things to do in mukteshwar, mukteshwar sightseeing, mukteshwar attractions"
         jsonLd={[articleSchema, breadcrumbSchema]}
       />
       <Header />
@@ -65,20 +65,32 @@ export default function ThingsToDoInMukteshwar() {
           {/* Header */}
           <header className="mb-10">
             <span className="text-xs font-semibold uppercase tracking-wider text-primary">
-              Travel Guide
+              Travel & Sightseeing
             </span>
             <h1 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mt-3 mb-4 leading-tight">
-              Things to Do in Mukteshwar | 15 Must-Visit Attractions & Hidden Gems (2026)
+              15 Best Places to Visit in Mukteshwar: Tourism & Sightseeing Guide (2026)
             </h1>
             <div className="flex items-center gap-4 text-sm text-muted-foreground">
               <span className="flex items-center gap-1">
-                <Calendar className="h-4 w-4" /> March 18, 2026
+                <Calendar className="h-4 w-4" /> March 19, 2026
               </span>
               <span className="flex items-center gap-1">
                 <Clock className="h-4 w-4" /> 12 min read
               </span>
             </div>
           </header>
+
+          {/* Featured Snippet Section */}
+          <div className="bg-primary/5 border-l-4 border-primary p-6 mb-10 rounded-r-xl">
+            <h2 className="text-lg font-semibold text-foreground mb-2">Top 5 Places to Visit in Mukteshwar</h2>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              <li>🕉️ <strong>Mukteshwar Dham:</strong> Ancient Shiva temple with Himalayan views.</li>
+              <li>🧗 <strong>Chauli Ki Jali:</strong> Dramatic cliffs for adventure and photography.</li>
+              <li>🌊 <strong>Bhalu Gaad Waterfall:</strong> A hidden gem for nature treks.</li>
+              <li>🏡 <strong>Inspection Bungalow:</strong> Colonial heritage site linked to Jim Corbett.</li>
+              <li>🍑 <strong>Fruit Orchards:</strong> Experience the lush apple and apricot farms of Sitla.</li>
+            </ul>
+          </div>
 
           {/* Featured Image */}
           <div className="mb-10 rounded-2xl overflow-hidden shadow-lg">
