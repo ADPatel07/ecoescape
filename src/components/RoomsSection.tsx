@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Users, Eye, Maximize, Coffee, Droplets, Wifi, BedDouble, Shield, Car } from "lucide-react";
 import { roomsConfig } from "@/config/rooms";
-import { trackBookingSubmit } from "@/lib/analytics";
 import { getCurrentPrice, formatPrice, type RoomType } from "@/services/pricing";
 
 // Room data without prices (prices added dynamically)
@@ -51,15 +50,7 @@ export function RoomsSection() {
     }));
   }, []);
 
-  const scrollToBooking = (roomName?: string) => {
-    if (roomName) {
-      trackBookingSubmit({ roomType: roomName, guests: 'unknown' });
-    }
-    const booking = document.getElementById("booking");
-    if (booking) {
-      booking.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  // scrollToBooking removed — booking links handled by room detail pages
 
   return (
     <section id="rooms" className="py-24 bg-background">

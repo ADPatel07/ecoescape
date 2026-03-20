@@ -39,7 +39,7 @@ const blogPosts = [
   {
     slug: "kainchi-dham-to-mukteshwar-distance",
     title: "Kainchi Dham to Mukteshwar: Distance, Route & Travel Guide (2026)",
-    excerpt: "Planning a spiritual journey? Get the latest guide on Kainchi Dham to Mukteshwar distance, best routes via Bhowali, taxi fares, and expert travel tips for 2026.",
+    excerpt: "Planning a spiritual journey from Kainchi Dham? Get the latest guide on Kainchi Dham to Mukteshwar distance, best routes via Bhowali, taxi fares, and expert travel tips for 2026.",
     date: "March 19, 2026",
     readTime: "5 min read",
     image: kainchiDhamImg,
@@ -48,8 +48,8 @@ const blogPosts = [
   },
   {
     slug: "mukteshwar-to-nainital-day-trip",
-    title: "Mukteshwar to Nainital Day Trip: The Ultimate 2026 Guide",
-    excerpt: "Everything you need for a perfect Mukteshwar to Nainital day trip. Distance, travel time, and top attractions like Naini Lake and Mall Road.",
+    title: "Mukteshwar to Nainital Distance & Day Trip Guide (2026)",
+    excerpt: "Everything you need for a perfect Mukteshwar to Nainital day trip. Nainital to Mukteshwar distance is ~50 km — get travel time, route options, and top attractions like Naini Lake.",
     date: "March 19, 2026",
     readTime: "6 min read",
     image: nainitalDayTripImg,
@@ -58,8 +58,8 @@ const blogPosts = [
   },
   {
     slug: "best-resorts-in-mukteshwar",
-    title: "10 Best Resorts in Mukteshwar: Luxury to Budget Comparison (2026)",
-    excerpt: "Compare the top resorts in Mukteshwar! From Lemon Tree and Justa to sustainable boutique stays like Ecoescape, find your perfect Himalayan home.",
+    title: "10 Best Hotels & Resorts in Mukteshwar: Luxury to Budget (2026)",
+    excerpt: "Looking for the best Mukteshwar hotel? Compare top resorts and homestays — from Lemon Tree and Justa to sustainable boutique stays like Ecoescape. Find your perfect Himalayan retreat.",
     date: "March 19, 2026",
     readTime: "8 min read",
     image: bestResortsImg,
@@ -68,8 +68,8 @@ const blogPosts = [
   },
   {
     slug: "spiritual-kumaon-guide",
-    title: "Spiritual Kumaon: A Guide to Mukteshwar & Jageshwar Dham (2026)",
-    excerpt: "Explore the ancient spiritual circuit of Kumaon. Guide to Mukteshwar Dham, Jageshwar Dham, and the holy Kainchi Dham pilgrimage.",
+    title: "Spiritual Kumaon: Mukteshwar Dham, Jageshwar & Kainchi Dham Guide (2026)",
+    excerpt: "Explore the ancient spiritual circuit of Kumaon — from Mukteshwar Dham temple to Jageshwar Dham and Kainchi Dham. Complete pilgrimage guide with distances and timings.",
     date: "March 19, 2026",
     readTime: "7 min read",
     image: spiritualKumaonImg,
@@ -88,8 +88,8 @@ const blogPosts = [
   },
   {
     slug: "mukteshwar-backpacker-guide",
-    title: "Backpacking Mukteshwar: Stays, Cafes & Solo Travel Tips (2026)",
-    excerpt: "The ultimate backpacker's guide to Mukteshwar. Compare budget stays, find the best solo-traveler cafes, and learn cheap travel hacks.",
+    title: "Backpacking Mukteshwar: Budget Stays, Cafes & Solo Travel Tips (2026)",
+    excerpt: "The ultimate backpacker's guide to Mukteshwar Uttarakhand. Compare budget hotels in Mukteshwar, find solo-traveler cafes, and get cheap travel hacks.",
     date: "March 19, 2026",
     readTime: "6 min read",
     image: backpackerImg,
@@ -98,8 +98,8 @@ const blogPosts = [
   },
   {
     slug: "mukteshwar-mahadev-temple-history",
-    title: "History & Myth: The Legend of Mukteshwar Mahadev Mandir (2026)",
-    excerpt: "Deep dive into the 350-year-old history of Mukteshwar Dham. Learn about the legend of liberation, Chauli Ki Jali, and ancient Kumaoni rituals.",
+    title: "Mukteshwar Mahadev Mandir: History, Legend & Ancient Rituals (2026)",
+    excerpt: "Deep dive into the 350-year-old history of Mukteshwar Dham temple. Learn about the legend of liberation, Chauli Ki Jali, and ancient Kumaoni rituals at the Mukteshwar Mandir.",
     date: "March 19, 2026",
     readTime: "7 min read",
     image: templeHistoryImg,
@@ -108,8 +108,8 @@ const blogPosts = [
   },
   {
     slug: "delhi-to-mukteshwar-road-trip",
-    title: "Delhi to Mukteshwar Road Trip Guide: Best Route & Stops (2026)",
-    excerpt: "Plan the perfect Delhi to Mukteshwar road trip. Best route via Moradabad, top dhabas for breakfast, and essential driving tips for the hills.",
+    title: "Delhi to Mukteshwar Distance, Route & Road Trip Guide (2026)",
+    excerpt: "Delhi to Mukteshwar distance is ~320 km (7-8 hours). Plan the perfect road trip with the best route via Moradabad, top dhabas, and essential hill driving tips.",
     date: "March 19, 2026",
     readTime: "8 min read",
     image: delhiRoadTripImg,
@@ -118,8 +118,8 @@ const blogPosts = [
   },
   {
     slug: "offbeat-places-in-mukteshwar",
-    title: "Offbeat Mukteshwar: 7 Hidden Gems Away from the Crowds (2026)",
-    excerpt: "Discover the offbeat side of Mukteshwar. From silent village trails to secret waterfalls, here are 7 hidden spots for 2026.",
+    title: "Offbeat Mukteshwar: 7 Hidden Places to Visit Beyond the Crowds (2026)",
+    excerpt: "Discover offbeat places to visit in Mukteshwar. From silent village trails to secret waterfalls, here are 7 hidden gems in Mukteshwar Uttarakhand for 2026.",
     date: "March 19, 2026",
     readTime: "6 min read",
     image: offbeatPlacesImg,
@@ -129,7 +129,7 @@ const blogPosts = [
   {
     slug: "spring-in-mukteshwar-guide",
     title: "Spring in Mukteshwar: Flowers, Fruit Blossoms & Best Weather (2026)",
-    excerpt: "Experience the magic of spring. Guide to flower seasons, fruit blossoms, and perfect temperatures for a mountain getaway.",
+    excerpt: "Experience the magic of spring. Guide to flower seasons, fruit blossoms, and perfect Mukteshwar temperature for a mountain getaway.",
     date: "March 19, 2026",
     readTime: "5 min read",
     image: springGuideImg,
@@ -138,9 +138,8 @@ const blogPosts = [
   },
   {
     slug: "monsoon-in-mukteshwar-guide",
-    title: "Mukteshwar in Monsoon: A Comprehensive Guide to the Misty Mountains",
-    excerpt:
-      "Experience the magic of Mukteshwar in monsoon. Our 2026 guide covers weather, misty Himalayan views, lush green trails, and why the rainy season is the best time for a quiet retreat.",
+    title: "Mukteshwar in Monsoon: Weather, Safety & Misty Mountain Guide (2026)",
+    excerpt: "Experience Mukteshwar in monsoon — weather conditions, misty Himalayan views, lush green trails, and why the rainy season is the best time for a quiet retreat in Uttarakhand.",
     date: "March 19, 2026",
     readTime: "9 min read",
     image: monsoonImg,
@@ -150,8 +149,7 @@ const blogPosts = [
   {
     slug: "best-photography-spots-in-mukteshwar",
     title: "10 Best Photography Spots in Mukteshwar: Capturing the Himalayan Soul",
-    excerpt:
-      "Looking for the best photography spots in Mukteshwar? From the dramatic cliffs of Chauli Ki Jali to the sunrise views at Ecoescape, here is your 2026 photography guide.",
+    excerpt: "Looking for the best photography spots in Mukteshwar? From the dramatic cliffs of Chauli Ki Jali to the sunrise views at Ecoescape, here is your 2026 photography guide.",
     date: "March 19, 2026",
     readTime: "8 min read",
     image: photographyImg,
@@ -161,8 +159,7 @@ const blogPosts = [
   {
     slug: "local-festivals-and-culture-guide",
     title: "Local Festivals & Culture in Mukteshwar: A Kumaoni Heritage Guide",
-    excerpt:
-      "Discover the vibrant culture of Mukteshwar. From the traditional Choliya dance to festivals like Phool Dei and Harela, learn how to experience authentic Kumaoni heritage at Ecoescape.",
+    excerpt: "Discover the vibrant culture of Mukteshwar Uttarakhand. From Choliya dance to Phool Dei and Harela, experience authentic Kumaoni heritage at Ecoescape.",
     date: "March 19, 2026",
     readTime: "10 min read",
     image: festivalsImg,
@@ -172,8 +169,7 @@ const blogPosts = [
   {
     slug: "mukteshwar-ultimate-packing-list",
     title: "Ultimate Packing List for Mukteshwar: Essentials for Every Season (2026)",
-    excerpt:
-      "What to pack for Mukteshwar? Our comprehensive 2026 packing guide covers clothing for summer, monsoon, and winter, plus trekking gear and essential travel items.",
+    excerpt: "What to pack for Mukteshwar? Our comprehensive 2026 packing guide covers clothing for summer, monsoon, and winter, plus trekking gear and essential travel items.",
     date: "March 19, 2026",
     readTime: "7 min read",
     image: packingImg,
@@ -183,8 +179,7 @@ const blogPosts = [
   {
     slug: "workcation-guide",
     title: "Workcation in Mukteshwar: A Digital Nomad's Guide to Working from the Hills",
-    excerpt:
-      "Planning a workcation in Mukteshwar? Our guide for digital nomads covers high-speed WiFi, power backup, quiet workspaces, and why Ecoescape is the perfect mountain office.",
+    excerpt: "Planning a workcation in Mukteshwar? Our guide covers high-speed WiFi, power backup, quiet workspaces, and why Ecoescape is the perfect mountain office.",
     date: "March 19, 2026",
     readTime: "7 min read",
     image: workcationImg,
@@ -194,8 +189,7 @@ const blogPosts = [
   {
     slug: "romantic-getaway-guide",
     title: "Romantic Getaway in Mukteshwar: Best Spots for Couples in 2026",
-    excerpt:
-      "Planning a romantic trip to Mukteshwar? Our couples guide covers candlelit terrace dinners, sunrise viewpoints, private bonfires, and the most romantic spots in the Kumaon hills.",
+    excerpt: "Planning a romantic trip to Mukteshwar? Our couples guide covers candlelit terrace dinners, sunrise viewpoints, private bonfires, and the most romantic spots in the Kumaon hills.",
     date: "March 19, 2026",
     readTime: "8 min read",
     image: romanticImg,
@@ -205,8 +199,7 @@ const blogPosts = [
   {
     slug: "solo-travel-guide",
     title: "Solo Travel in Mukteshwar: A Safe and Serene Guide for Adventurers",
-    excerpt:
-      "Planning a solo trip to Mukteshwar? Our solo travel guide covers safety tips, navigation, meeting locals, and the best ways to explore the Kumaon hills on your own.",
+    excerpt: "Planning a solo trip to Mukteshwar? Our solo travel guide covers safety tips, navigation, meeting locals, and the best ways to explore the Kumaon hills on your own.",
     date: "March 19, 2026",
     readTime: "7 min read",
     image: soloImg,
@@ -216,8 +209,7 @@ const blogPosts = [
   {
     slug: "family-vacation-guide",
     title: "Mukteshwar Family Vacation: Best Activities for Kids and Seniors",
-    excerpt:
-      "Planning a family trip to Mukteshwar? Our guide covers activities for kids and seniors, family-friendly rooms, local picnics, and why Ecoescape is the perfect multigenerational retreat.",
+    excerpt: "Planning a family trip to Mukteshwar? Our guide covers activities for kids and seniors, family-friendly rooms, and why Ecoescape is the perfect multigenerational retreat.",
     date: "March 19, 2026",
     readTime: "8 min read",
     image: familyImg,
@@ -226,9 +218,8 @@ const blogPosts = [
   },
   {
     slug: "how-to-reach-mukteshwar-guide",
-    title: "How to Reach Mukteshwar: The Ultimate Transport Guide (2026)",
-    excerpt:
-      "Planning a trip to Mukteshwar? Our comprehensive 2026 guide covers how to reach Mukteshwar by train, road, and bus. Includes Delhi to Kathgodam details and local taxi tips.",
+    title: "How to Reach Mukteshwar from Delhi, Nainital & Kathgodam (2026)",
+    excerpt: "How to reach Mukteshwar? Complete 2026 transport guide covering Delhi to Mukteshwar distance (~320 km), Kathgodam to Mukteshwar route, and local taxi tips.",
     date: "March 19, 2026",
     readTime: "8 min read",
     image: howToReachImg,
@@ -237,9 +228,8 @@ const blogPosts = [
   },
   {
     slug: "best-cafes-and-restaurants-in-mukteshwar",
-    title: "Best Cafes in Mukteshwar: A Foodie's Guide to Mountain Dining",
-    excerpt:
-      "Discover the best cafes and restaurants in Mukteshwar. From the famous Choco-House and Nirvana Cafe to authentic Kumaoni dining at Ecoescape, here is your ultimate foodie guide.",
+    title: "Best Cafes & Restaurants in Mukteshwar: A Foodie's Guide (2026)",
+    excerpt: "Discover the best cafes and restaurants in Mukteshwar. From the famous Choco-House and Nirvana Cafe to authentic Kumaoni dining at Ecoescape — your ultimate foodie guide.",
     date: "March 19, 2026",
     readTime: "10 min read",
     image: cafesImg,
@@ -248,9 +238,8 @@ const blogPosts = [
   },
   {
     slug: "mukteshwar-snowfall-guide",
-    title: "Snowfall in Mukteshwar: Your Ultimate Guide to a Winter Wonderland Experience",
-    excerpt:
-      "Experience the magic of snowfall in Mukteshwar. Our guide covers the best months for snow, top viewing spots, winter packing essentials, and what to expect during a winter trip.",
+    title: "Snowfall in Mukteshwar 2026: Best Months, Spots & Winter Travel Guide",
+    excerpt: "When does it snow in Mukteshwar? Complete guide to Mukteshwar snowfall — best months (Dec–Feb), top snow viewing spots, winter packing essentials, and what to expect during a winter trip.",
     date: "March 19, 2026",
     readTime: "10 min read",
     image: snowfallImg,
@@ -260,8 +249,7 @@ const blogPosts = [
   {
     slug: "mukteshwar-weekend-itinerary",
     title: "Mukteshwar 2-Day Itinerary: The Perfect Weekend Getaway from Delhi",
-    excerpt:
-      "Planning a quick trip to Mukteshwar? Our 2-day itinerary covers the best sights, adventure activities, and local dining for a perfect weekend getaway from Delhi/NCR.",
+    excerpt: "Planning a quick trip to Mukteshwar? Our 2-day itinerary covers the best places to visit, adventure activities, and local dining for a perfect weekend getaway from Delhi.",
     date: "March 19, 2026",
     readTime: "8 min read",
     image: itineraryImg,
@@ -271,8 +259,7 @@ const blogPosts = [
   {
     slug: "mukteshwar-trekking-guide",
     title: "Mukteshwar Trekking Guide: 5 Best Trails for Adventure & Nature Lovers",
-    excerpt:
-      "Discover the best trekking trails in Mukteshwar. From the Bhalu Gaad waterfall to scenic forest walks, explore the top hiking paths near Ecoescape Mukteshwar.",
+    excerpt: "Discover the best trekking trails in Mukteshwar. From the Bhalu Gaad waterfall to scenic forest walks, explore the top hiking paths near Ecoescape Mukteshwar.",
     date: "March 19, 2026",
     readTime: "8 min read",
     image: trekkingImg,
@@ -281,9 +268,8 @@ const blogPosts = [
   },
   {
     slug: "fruit-orchards-of-mukteshwar-guide",
-    title: "Fruit Orchards of Mukteshwar: A Guide to Apple, Peach & Plum Seasons",
-    excerpt:
-      "Explore the 'Fruit Bowl of Kumaon'. Our guide to Mukteshwar's fruit orchards covers the best seasons for apple, peach, and plum harvests and how to enjoy the experience.",
+    title: "Fruit Orchards of Mukteshwar: Apple, Peach & Plum Season Guide",
+    excerpt: "Explore the 'Fruit Bowl of Kumaon'. Guide to Mukteshwar's fruit orchards — apple, peach, and plum harvest seasons and how to enjoy the orchard experience.",
     date: "March 19, 2026",
     readTime: "7 min read",
     image: orchardsImg,
@@ -293,8 +279,7 @@ const blogPosts = [
   {
     slug: "stargazing-in-mukteshwar",
     title: "Stargazing in Mukteshwar: A Complete Guide to the Night Sky at Ecoescape",
-    excerpt:
-      "Discover the magic of the Himalayan night sky. Our guide to stargazing in Mukteshwar covers the best times to visit, what to see, and why Ecoescape is the perfect dark-sky retreat.",
+    excerpt: "Discover the magic of the Himalayan night sky. Guide to stargazing in Mukteshwar — best times, what to see, and why Ecoescape is the perfect dark-sky retreat.",
     date: "March 19, 2026",
     readTime: "8 min read",
     image: stargazingImg,
@@ -304,8 +289,7 @@ const blogPosts = [
   {
     slug: "birdwatching-in-mukteshwar-guide",
     title: "Birdwatching in Mukteshwar: A Paradise for Nature Lovers & Birders",
-    excerpt:
-      "Explore the rich avian diversity of Mukteshwar. From the colorful Himalayan Monal to the elusive Laughingthrush, discover the best birding trails around Ecoescape.",
+    excerpt: "Explore the rich avian diversity of Mukteshwar. From the Himalayan Monal to the Laughingthrush, discover the best birding trails around Ecoescape.",
     date: "March 19, 2026",
     readTime: "10 min read",
     image: birdwatchingImg,
@@ -314,20 +298,18 @@ const blogPosts = [
   },
   {
     slug: "kumaoni-food-guide",
-    title: "Kumaoni Food Guide: Traditional Cuisine & Dining in Mukteshwar | Ecoescape",
-    excerpt:
-      "Discover authentic Kumaoni food in Mukteshwar - 12 traditional dishes, local ingredients, best restaurants, terrace dining experiences, and Uttarakhand cuisine guide. Taste the Himalayas!",
+    title: "Kumaoni Food Guide: Traditional Cuisine & Dining in Mukteshwar",
+    excerpt: "Discover authentic Kumaoni food in Mukteshwar — 12 traditional dishes, local ingredients, best restaurants, terrace dining, and Uttarakhand cuisine guide.",
     date: "March 18, 2026",
     readTime: "10 min read",
     image: kumaoniFoodImg,
-    imageAlt: "Traditional Kumaoni thali with bhat ki churkani, kafuli, baadi served at Ecoescape Mukteshwar with Himalayan views",
+    imageAlt: "Traditional Kumaoni thali with bhat ki churkani, kafuli, baadi served at Ecoescape Mukteshwar",
     category: "Food & Culture",
   },
   {
     slug: "things-to-do-in-mukteshwar",
-    title: "Things to Do in Mukteshwar | 15 Must-Visit Attractions & Hidden Gems (2026)",
-    excerpt:
-      "Discover the best things to do in Mukteshwar - from ancient temples and adventure sports to scenic viewpoints and cultural experiences. Complete guide with distances and tips.",
+    title: "Places to Visit in Mukteshwar | 15 Must-See Attractions & Hidden Gems (2026)",
+    excerpt: "Discover the best places to visit in Mukteshwar — ancient temples, adventure sports, scenic viewpoints, and cultural experiences. Complete guide with Mukteshwar distance from Nainital and tips.",
     date: "March 18, 2026",
     readTime: "12 min read",
     image: chauliKiJaliImg,
@@ -336,9 +318,8 @@ const blogPosts = [
   },
   {
     slug: "mukteshwar-mahadev-temple-guide",
-    title: "Mukteshwar Mahadev Temple — Complete Visitor Guide & Where to Stay in Mukteshwar",
-    excerpt:
-      "Discover the ancient Mukteshwar Mahadev Temple, its history, timings, how to reach, and the best places to stay nearby for a memorable Himalayan pilgrimage.",
+    title: "Mukteshwar Mahadev Temple — Complete Visitor Guide & Where to Stay (2026)",
+    excerpt: "Complete guide to Mukteshwar Mahadev Temple (Mukteshwar Dham) — history, timings, how to reach, and the best places to stay nearby for a memorable Himalayan pilgrimage.",
     date: "March 5, 2026",
     readTime: "8 min read",
     image: heroSunriseImg,
@@ -347,9 +328,8 @@ const blogPosts = [
   },
   {
     slug: "mukteshwar-weather-guide",
-    title: "Weather in Mukteshwar — Month-by-Month Guide for Planning Your Trip",
-    excerpt:
-      "Everything you need to know about Mukteshwar's weather throughout the year — best months to visit, what to pack, and seasonal highlights for every traveler.",
+    title: "Mukteshwar Weather Today & Month-by-Month Temperature Guide (2026)",
+    excerpt: "Check Mukteshwar weather today and plan your trip with our complete month-by-month temperature guide. Best time to visit for snowfall, pleasant weather, or Himalayan views.",
     date: "March 2, 2026",
     readTime: "6 min read",
     image: gardenTerraceImg,

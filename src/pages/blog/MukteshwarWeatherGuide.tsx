@@ -27,7 +27,7 @@ const weatherData = [
 export default function MukteshwarWeatherGuide() {
   // Article Schema
   const articleSchema = generateArticleSchema({
-    headline: "Weather in Mukteshwar 10 Days: Month-by-Month Guide (2026)",
+    headline: "Mukteshwar Weather Today & Month-by-Month Temperature Guide (2026)",
     image: "https://ecoescapemukteshwar.com/og-image.jpg",
     datePublished: formatDateForSchema("March 2, 2026"),
     author: {
@@ -39,7 +39,7 @@ export default function MukteshwarWeatherGuide() {
       name: "Ecoescape Mukteshwar",
       url: "https://ecoescapemukteshwar.com",
     },
-    description: "Get the latest weather in Mukteshwar 10 days forecast, month-by-month temperature guides, and best time to visit for snow or pleasant sunshine in 2026.",
+    description: "Check Mukteshwar weather today, get month-by-month temperature data, and find the best time to visit for snowfall or pleasant sunshine in 2026.",
     url: "https://ecoescapemukteshwar.com/blog/mukteshwar-weather-guide",
   });
 
@@ -53,10 +53,10 @@ export default function MukteshwarWeatherGuide() {
   return (
     <div className="min-h-screen bg-background">
       <PageMeta
-        title="Weather in Mukteshwar 10 Days | Temperature & Best Time to Visit (2026)"
-        description="Plan your trip with our latest Mukteshwar weather guide. Includes 10-day forecast insights, month-by-month temperature charts, and the best time for snow in 2026."
+        title="Mukteshwar Weather Today | Temperature & Best Time to Visit (2026)"
+        description="Check Mukteshwar weather today. Month-by-month temperature guide, best time to visit for snowfall or sunshine, and packing tips for Mukteshwar Uttarakhand in 2026."
         canonical="https://ecoescapemukteshwar.com/blog/mukteshwar-weather-guide"
-        keywords="weather in mukteshwar 10 days, Mukteshwar weather, best time to visit Mukteshwar, Mukteshwar temperature, temperature in mukteshwar, Uttarakhand weather"
+        keywords="mukteshwar weather, weather mukteshwar, mukteshwar weather today, mukteshwar temperature, temperature in mukteshwar, temperature mukteshwar, mukteshwar snowfall, best time to visit mukteshwar, weather in mukteshwar"
         jsonLd={[articleSchema, breadcrumbSchema]}
       />
       <Header />
@@ -75,7 +75,7 @@ export default function MukteshwarWeatherGuide() {
               Weather & Planning
             </span>
             <h1 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mt-3 mb-4 leading-tight">
-              Weather in Mukteshwar 10 Days: Month-by-Month Guide for Planning Your Trip (2026)
+              Mukteshwar Weather Today & Month-by-Month Temperature Guide (2026)
             </h1>
             <div className="flex items-center gap-4 text-sm text-muted-foreground">
               <span className="flex items-center gap-1">

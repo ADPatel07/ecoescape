@@ -178,8 +178,8 @@ export function generateReviewSchema(data: ReviewData): ReviewSchema {
  * Generate Breadcrumb Schema for navigation hierarchy
  */
 export function generateBreadcrumbSchema(items: BreadcrumbItem[]): BreadcrumbSchema {
-  const itemListElement = items.map((item, index) => ({
-    "@type": "ListItem",
+  const itemListElement: { "@type": "ListItem"; position: number; name: string; item?: string }[] = items.map((item, index) => ({
+    "@type": "ListItem" as const,
     position: index + 1,
     name: item.name,
     ...(item.item && { item: item.item }),
