@@ -27,7 +27,7 @@ const weatherData = [
 export default function MukteshwarWeatherGuide() {
   // Article Schema
   const articleSchema = generateArticleSchema({
-    headline: "Weather in Mukteshwar 10 Days: Month-by-Month Guide (2026)",
+    headline: "Mukteshwar Weather Today & Month-by-Month Temperature Guide (2026)",
     image: "https://ecoescapemukteshwar.com/og-image.jpg",
     datePublished: formatDateForSchema("March 2, 2026"),
     author: {
@@ -39,7 +39,7 @@ export default function MukteshwarWeatherGuide() {
       name: "Ecoescape Mukteshwar",
       url: "https://ecoescapemukteshwar.com",
     },
-    description: "Get the latest weather in Mukteshwar 10 days forecast, month-by-month temperature guides, and best time to visit for snow or pleasant sunshine in 2026.",
+    description: "Check Mukteshwar weather today, get month-by-month temperature data, and find the best time to visit for snowfall or pleasant sunshine in 2026.",
     url: "https://ecoescapemukteshwar.com/blog/mukteshwar-weather-guide",
   });
 
